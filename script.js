@@ -1,6 +1,3 @@
-
-
-
 document.addEventListener('DOMContentLoaded', (event) => {
     window.scrollTo(0, 0);
 });
@@ -35,3 +32,6 @@ window.onscroll = ()=>{
         }
     })
 }
+
+//current year
+document.querySelector('#currentYear').innerText = new Date().getFullYear();

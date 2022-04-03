@@ -14,8 +14,11 @@ padding: 0;
 font-family: "Poppins", sans-serif;
 transition: 0.2s all linear;
 }
+html{
+    scroll-behavior: smooth;
+}
 body {
-background-color: rgb(75, 75, 75);
+background-color: var(--black);
 }
 .section {
     padding: 2rem 10%;
@@ -247,6 +250,7 @@ width: 100%;
     font-size: 1rem;
     line-height: 2;
     color:#969696;
+    /* color:#5f5f5f; */
 }
 
 #department .box:hover{
@@ -310,7 +314,7 @@ width: 100%;
 }
 
 #contact .box-container .box p{
-    color:white;
+    color: #5f5f5f;
     margin: 0.5rem 0;
 }
 
@@ -329,15 +333,7 @@ width: 100%;
     width:49%;
 }
 
-/* #contact .box-container form .inputBox input,
-#contact .box-container form textarea{
-    outline: none;
-    border-radius: 1rem;
-    padding:0.8rem 2rem;
-    font-size: 1rem;
-    color:white;
-    margin:1rem 0;
-} */
+
 #contact .box-container form .inputBox input::placeholder,
 #contact .box-container form textarea::placeholder{
     color:#5f5f5f;
@@ -397,14 +393,42 @@ width: 100%;
 
 #contact .box-container form .btn:hover {
 background-color: rgb(0, 191, 208);
-box-shadow: 0px 15px 20px rgba(0, 191, 208, 0.4);
+box-shadow: 0px 15px 20px rgba(0, 191, 208, 0.2);
 color: #fff;
-transform: translateY(-7px);
+transform: translateY(-5px);
 }
 #contact .box-container form .btn:active {
 transform: translateY(-1px);
 }
+/* contact */
 
+/* footer */
+footer{
+    text-align:center;
+}
+
+footer .socials a{
+    font-size: 2rem;
+    color:#fff;
+    font-weight: 700;
+    padding:1em;
+    margin: 0.5em;
+    cursor: pointer;
+}
+footer .socials a:hover{
+    color:var(--blue);
+}
+
+footer .footerBottom{
+    background-color: rgb(34, 34, 34);
+    color:white;
+    padding:0.5em 0;
+    margin-top:1em;
+}
+footer .footerBottom a{
+    text-decoration: none;
+    color:var(--blue);
+}
 
 
 @keyframes landing-h1 {

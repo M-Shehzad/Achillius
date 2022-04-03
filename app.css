@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@300;400;500;700&display=swap");
 :root {
   --black: #323232;
-  --blue: #008296;
+  --blue: #1699ad;
   --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
   --heading:3rem;
   --easeout:cubic-bezier(.26,.62,.45,.88);
@@ -188,7 +188,7 @@ width: 100%;
 /* departments starts */
 #department{
     overflow: hidden;
-    background-color: white;
+    background-color: whitesmoke;
     position: relative;
     z-index: 100;
     /* transform: translateY(-5rem); */
@@ -221,7 +221,7 @@ width: 100%;
 #department .box-container{
     margin:3rem 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     grid-gap: 3rem;
 }
 
@@ -230,6 +230,7 @@ width: 100%;
     border-radius: 1rem;
     padding:3rem;
     box-shadow: var(--box-shadow);
+    background-color: white;
 }
 #department .box img{
     height:7rem;
@@ -239,13 +240,13 @@ width: 100%;
 #department .box h3{
 
     margin:3rem 0 0rem;
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 
 #department .box p{
     font-size: 1rem;
     line-height: 2;
-    color:rgb(150, 150, 150);
+    color:#969696;
 }
 
 #department .box:hover{
@@ -262,6 +263,149 @@ width: 100%;
 #department .box:hover img{
     filter: invert(100%);
 }
+/* department */
+
+/* contact */
+#contact{
+    background-color: var(--black);
+}
+
+#contact .contactSubtitle{
+    margin-top:0.5em 0;
+    padding: 0.2em 0.5em;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--blue);
+}
+
+#contact .contactTitle{
+    display:table;
+    margin:0 auto 0.5em;
+    line-height: 1;
+    font-size: var(--heading);
+    color: white;
+    text-align: center;
+}
+
+#contact .contactTitle .underline{
+    background-color: white;
+}
+
+#contact .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap:3rem;
+    margin:2em 0;
+}
+
+#contact .box-container .box{
+    width:30rem;
+}
+
+#contact .box-container .box h3{
+    font-size: 1.2rem;
+    color: white;
+}
+
+#contact .box-container .box p{
+    color:white;
+    margin: 0.5rem 0;
+}
+
+#contact .box-container form{
+    flex:1 1 40rem;
+}
+
+#contact .box-container form .inputBox{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#contact .box-container form .inputBox input,
+#contact .box-container form .inputBox select{
+    width:49%;
+}
+
+/* #contact .box-container form .inputBox input,
+#contact .box-container form textarea{
+    outline: none;
+    border-radius: 1rem;
+    padding:0.8rem 2rem;
+    font-size: 1rem;
+    color:white;
+    margin:1rem 0;
+} */
+#contact .box-container form .inputBox input::placeholder,
+#contact .box-container form textarea::placeholder{
+    color:#5f5f5f;
+}
+
+#contact .box-container form .inputBox input,
+#contact .box-container form textarea,
+#contact .box-container form select{
+    font-size: 1.2rem;
+    outline:none;
+    border: none;
+    color:white;
+    background: transparent;
+    border-bottom: 2px solid #5f5f5f;
+    padding:0.5rem 1rem;
+    margin:1rem 0;
+}
+
+
+
+#contact .box-container form .inputBox select option{
+    background: var(--black);
+    color: #5f5f5f;
+}
+
+#contact .box-container form .inputBox input:valid,
+#contact .box-container form textarea:valid,
+#contact .box-container form .inputBox input:focus,
+#contact .box-container form textarea:focus,
+#contact .box-container form .inputBox select:focus,
+#contact .box-container form .inputBox select:valid{
+    border-bottom:2px solid #fff;
+}
+
+
+#contact .box-container form textarea{
+    width:100%;
+    resize:none;
+    height:15rem;
+}
+
+#contact .box-container form .btn{
+    padding: 0.7em 1.5em;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #fff;
+    background-color: var(--black);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+#contact .box-container form .btn:hover {
+background-color: rgb(0, 191, 208);
+box-shadow: 0px 15px 20px rgba(0, 191, 208, 0.4);
+color: #fff;
+transform: translateY(-7px);
+}
+#contact .box-container form .btn:active {
+transform: translateY(-1px);
+}
+
+
 
 @keyframes landing-h1 {
     100%{

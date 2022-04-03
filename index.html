@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="app.css">
 
     <title>Achillius</title>
@@ -166,13 +165,11 @@
         <div class="box-container">
             <div class="box">
                 <img src="images\system.svg" alt="">
-                <i class="fa-thin fa-gears"></i>
                 <h3>Mechanical</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, adipisci. Praesentium nihil repudiandae libero, cumque a veritatis nostrum ab incidunt?</p>
             </div>
             <div class="box">
                 <img src="images\cpu.svg" alt="">
-                <i class="fa-thin fa-microchip"></i>
                 <h3>Electronics</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, adipisci. Praesentium nihil repudiandae libero, cumque a veritatis nostrum ab incidunt?</p>
             </div>
@@ -182,6 +179,37 @@
                 <!-- <i class="fa-thin fa-laptop-code"></i> -->
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, adipisci. Praesentium nihil repudiandae libero, cumque a veritatis nostrum ab incidunt?</p>
             </div>
+        </div>
+    </section>
+    <section id="contact" class="section">
+        <p class="contactSubtitle">want to join us?</p>
+        <h2 class="contactTitle">Recruitment <span class="underline"></span></h2>
+        <div class="box-container">
+            <div class="box">
+                <h3>Address</h3>
+                <p>St Joseph Engineering College, Vamanjoor 575028, Mangalore, Karnataka 575002, IN</p>
+                <h3>Email</h3>
+                <p>achillius@gmail.com</p>
+                <h3>phone</h3>
+                <p>+91 6969696969</p>
+            </div>
+            <form autocomplete="off">
+                <div class="inputBox">
+                    <input type="text" placeholder="Your Name" required autocomplete="off">
+                    <input type="tel" placeholder="Your Number" required autocomplete="off">
+                </div>
+                <div class="inputBox">
+                    <input type="text" placeholder="Email" required autocomplete="off">
+                    <select name="department" id="" required>
+                        <option value="" selected disabled class="disabled">Interested department</option>
+                        <option value="Mechanical">Mechanical</option>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Computer science">Computer science</option>
+                    </select>
+                </div>
+                <textarea name="" placeholder="Your message" id="" cols="30" rows="10" required autocomplete="off"></textarea>
+                <input type="submit" value="Submit" class="btn">
+            </form>
         </div>
     </section>
     <script src="script.js"></script>

@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@300;400;500;700&display=swap");
+:root {
+  --black: #323232;
+  --blue: #00eaff;
+  --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  --heading:3rem;
+}
+
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+font-family: "Poppins", sans-serif;
+transition: 0.2s all linear;
+}
+body {
+background-color: rgb(75, 75, 75);
+}
+.section {
+    padding: 2rem 10%;
+}
+
+
+/* Navbar starts */
+header {
+position: fixed;
+z-index: 1000;
+top: 0;
+left: 0;
+right: 0;
+padding: 0.5rem 4%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+header .logo {
+font-family: "Montserrat", sans-serif;
+display: flex;
+align-items: center;
+font-size: 2rem;
+cursor: pointer;
+}
+
+header .logo svg {
+width: 1.5em;
+padding: 0.2em;
+height: auto;
+fill: white;
+}
+
+header a {
+text-transform: uppercase;
+color: white;
+text-decoration: none;
+font-weight: 600;
+}
+
+header nav a {
+/* border: 1px solid white; */
+color: #fff;
+padding: 0.5em 1.5em;
+border-radius: 0.5em;
+}
+
+header nav a:hover {
+background-color: var(--blue);
+color: var(--black);
+}
+
+header .cta {
+padding: 0.2em 1.2em;
+border-radius: 5em;
+border: 0.1em solid var(--blue);
+}
+
+header .cta:hover {
+background-color: rgba(0, 234, 255, 0.2);
+transform: translateY(-0.1em);
+}
+
+.sticky {
+background-color: var(--black);
+}
+
+/* Home section */
+
+#home {
+position: relative;
+}
+#home h1 {
+/* border: 1px solid white; */
+width: 100%;
+text-align: center;
+color: #fff;
+text-transform: uppercase;
+font-family: "Montserrat", sans-serif;
+font-size: 5rem;
+font-weight: 700;
+position: absolute;
+z-index: 10;
+top: 75%;
+left: 50%;
+transform: translateY(-50%) translateX(-50%);
+animation: landing-h1 1s ease-out forwards;
+}
+
+#home .carbg {
+/* this is to fix white space below car bg */
+display: block;
+width: 100%;
+}
+
+#home .darkoverlay {
+position: absolute;
+inset: 0;
+opacity: 0%;
+/* black overlay */
+background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(0, 0, 0, 0) 100%
+    );
+animation: landing-overlay 1.5s ease-out forwards;
+}
+
+#home .car {
+position: absolute;
+z-index: 100;
+left: 0;
+bottom: 0;
+width: 100%;
+}
+
+/* About us section */
+
+.about{
+    overflow: hidden;
+    background-color: var(--black);
+    position: relative;
+    z-index: 100;
+    /* padding:1em 0; */
+    /* transform: translateY(-5rem); */
+}
+.aboutSubtitle{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--blue);
+}
+.aboutTitle{
+    line-height: 1;
+    font-size: var(--heading);
+    color: white;
+    text-align: center;
+}
+.about img{
+    display:block;
+    width:85%;
+    margin: 1em auto;
+}
+
+.about .paragraph{
+    color:#fff;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+/* About us ends */
+
+/* departments starts */
+.department{
+    overflow: hidden;
+    background-color: white;
+    position: relative;
+    z-index: 100;
+    /* transform: translateY(-5rem); */
+}
+.departmentSubtitle{
+    /* display: inline; */
+    margin-top:0.5em 0;
+    padding: 0.2em 0.5em;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 300;
+    /* background-color: var(--black); */
+    /* color: var(--blue); */
+    color: #008296;
+}
+.departmentTitle{
+    line-height: 1;
+    font-size: var(--heading);
+    color: var(--black);
+    text-align: center;
+}
+
+
+.department .box-container{
+    margin:3rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 3rem;
+}
+
+.department .box-container .box{
+    text-align: center;
+    border-radius: 1rem;
+    padding:3rem;
+    box-shadow: var(--box-shadow);
+}
+.department .box img{
+    height:7rem;
+    color: #00eaff;
+}
+
+.department .box h3{
+
+    margin:3rem 0 0rem;
+    font-size: 2rem;
+}
+
+.department .box p{
+    font-size: 1rem;
+    line-height: 2;
+    color:rgb(150, 150, 150);
+}
+
+.department .box:hover{
+    background-color: var(--black);
+    cursor: pointer;
+}
+
+
+.department .box:hover h3,
+.department .box:hover p{
+    color:white;
+}
+
+.department .box:hover img{
+    filter: invert(100%);
+}
+
+@keyframes landing-h1 {
+    100%{
+        top:25%;
+    }
+}
+
+@keyframes landing-overlay {
+    100%{
+        opacity: 100%;
+    }
+}

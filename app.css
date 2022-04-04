@@ -98,8 +98,35 @@ background-color: var(--black);
 /* Home section */
 
 #home {
-position: relative;
+/* position: relative; */
+/* height: 120vh; */
 }
+
+#home img{
+    top:0;
+    width:100%;
+    position: absolute;
+    height: clamp(100vh,100vw,120vh);
+    object-fit: cover;
+    object-position: 35%;
+    z-index: -1;
+}
+
+#home .carbg {
+/* this is to fix white space below car bg */
+/* display: block; */
+position:relative;
+width: 100%;
+top:0;
+}
+#home .car {
+position: absolute;
+z-index: 2;
+left: 0;
+bottom: 0;
+width: 100%;
+}
+
 #home h1 {
 /* border: 1px solid white; */
 width: 100%;
@@ -107,21 +134,17 @@ text-align: center;
 color: #fff;
 text-transform: uppercase;
 font-family: "Montserrat", sans-serif;
+/* font-size: clamp(2rem,5vw+1rem,5rem); */
 font-size: 5rem;
 font-weight: 700;
 position: absolute;
-z-index: 10;
-top: 50%;
+z-index: 1;
+top: 80%;
 left: 50%;
-transform: translateY(-40%) translateX(-50%);
-animation: landing-h1 1s var(--easeout) forwards;
+transform: translateY(-35%) translateX(-50%);
+animation: landing-h1 1s var(--easeout) 1s forwards;
 }
 
-#home .carbg {
-/* this is to fix white space below car bg */
-display: block;
-width: 100%;
-}
 
 #home .darkoverlay {
 position: absolute;
@@ -133,16 +156,9 @@ background: linear-gradient(
         rgba(0, 0, 0, 0.5) 0%,
         rgba(0, 0, 0, 0) 100%
     );
-animation: landing-overlay 1.5s var(--easeout) forwards;
+animation: landing-overlay 1.5s var(--easeout) 1s forwards;
 }
 
-#home .car {
-position: absolute;
-z-index: 100;
-left: 0;
-bottom: 0;
-width: 100%;
-}
 
 /* About us section */
 

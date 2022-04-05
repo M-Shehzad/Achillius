@@ -128,7 +128,7 @@ background-color: var(--black);
 
 #home .carbg {
 /* this is to fix white space below car bg */
-/* display: block; */
+display: block;
 position:relative;
 width: 100%;
 top:0;
@@ -179,13 +179,29 @@ animation: landing-overlay 1.5s var(--easeout) 1s forwards;
 #about{
     overflow: hidden;
     background-color: var(--black);
-    /* position: relative; */
-    /* z-index: 100; */
-    /* padding:1em 0; */
-    /* transform: translateY(-5rem); */
+    
+    position: relative;
+    z-index: -2;
+    background: url(images/IMG_20200305_105924.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100vh;
 }
+
+#about .darkoverlay {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    opacity: 30%;
+    /* black overlay */
+    background: rgb(0,0,0);
+}
+
 .aboutSubtitle{
-    color: var(--blue);
+    /* color: var(--blue); */
+    color:#00eaff
 }
 .aboutTitle{
     /* border:1px solid blue; */
@@ -454,7 +470,7 @@ footer .footerBottom a{
 
 @media (max-width:1200px) {
     section {
-        padding: 2rem 2%;
+        padding: 2rem 4%;
     }
 }
 

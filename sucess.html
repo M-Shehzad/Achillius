@@ -4,15 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="app.css">
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@300;400;500;700&display=swap");
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+            transition: 0.2s all linear;
+        }
+        body{
+            background-color: whitesmoke;
+        }
+        div{
+            text-align: center;
+            position: absolute;
+            top:25%;
+            left:50%;
+            transform: translateY(-50%);
+            transform: translateX(-50%);
+        }
+        div>h1{
+            font-size: 2rem;
+        }
+        div>p{
+            font-size:1.2rem;
+            color:#747474;
+        }
+        svg{
+            width:25%;
+            height:50%;
+        }
+    </style>
     <title>Achillius</title>
 </head>
 <body>
-    <!-- navbar starts -->
-    <header>
-        <a href="/" class='logo'>
-            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+    <div>
+        <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
             width="1182.000000pt" height="1182.000000pt" viewBox="0 0 1182.000000 1182.000000"
             preserveAspectRatio="xMidYMid meet">
             <metadata>
@@ -129,117 +158,8 @@
             -96 205 -156 442 -53 216 -64 249 -78 249 -5 0 -14 -15 -20 -32z"/>
             </g>
             </svg>
-            Achillius
-        </a>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#department">Departments</a>
-            <a href="#contact">Contact</a>
-        </nav>
-        <i id="menu-bars" class="fa-solid fa-bars"></i>
-        <!-- <a href="" class='cta'>Sponsor</a> -->
-    </header>
-    <!-- navbar ends -->
-    <!-- landing section -->
-    <div id='home'>
-        <h1 class="heroTitle">Drive the future</h1>
-        <img class='carbg' src="images/originalweb.webp" alt="">
-        <div class='darkoverlay'></div>
-        <img class='car' src="images/car2.webp" alt="">
+        <h1>Form Sent!</h1>
+        <p>We will get back to you very soon.</p>
     </div>
-    <!-- landing ends -->
-    <!-- About -->
-    <section id="about" class=" section">
-        <div class='darkoverlay'></div>
-        <!-- <img src="images\IMG_20200305_105924.jpg" alt=""> -->
-        <div class="details">
-            <p class="subtitle aboutSubtitle">who are we?</p>
-            <h2 class="title aboutTitle">About us<span class="underline"></span></h2>
-            <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-        </div>
-    </section>
-    <!-- about ends -->
-    <!-- departments -->
-    <section id="department" class="section">
-        <p class="subtitle departmentSubtitle">What you can do</p>
-        <h2 class="title departmentTitle">Departments<span class="underline"></span></h2>
-        <div class="box-container">
-            <div class="box">
-                <img src="images\system.svg" alt="">
-                <h3>Mechanical</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, adipisci. Praesentium nihil repudiandae libero, cumque a veritatis nostrum ab incidunt?</p>
-            </div>
-            <div class="box">
-                <img src="images\cpu.svg" alt="">
-                <h3>Electronics</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, adipisci. Praesentium nihil repudiandae libero, cumque a veritatis nostrum ab incidunt?</p>
-            </div>
-            <div class="box">
-                <img src="images\desktop.svg" alt="">
-                <h3>Computer Science</h3>
-                <!-- <i class="fa-thin fa-laptop-code"></i> -->
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, adipisci. Praesentium nihil repudiandae libero, cumque a veritatis nostrum ab incidunt?</p>
-            </div>
-        </div>
-    </section>
-    <!-- contact -->
-    <section id="contact" class="section">
-        <p class="subtitle contactSubtitle">want to join us?</p>
-        <h2 class="title contactTitle">Recruitment <span class="underline"></span></h2>
-        <div class="box-container">
-            <div class="box">
-                <h3>Address</h3>
-                <p>St Joseph Engineering College, Vamanjoor 575028, Mangalore, Karnataka 575002, IN</p>
-                <h3>Email</h3>
-                <p>achillius@gmail.com</p>
-                <h3>phone</h3>
-                <p>+91 6969696969</p>
-            </div>
-            <form autocomplete="off" action="https://formsubmit.co/maxbrower480@gmail.com" method="POST">
-                <!-- honey pot -->
-                <input type="text" name="_honey" style="display: none;">
-                <!-- disable captcha -->
-                <input type="hidden" name="_captcha" value="false">
-
-                <!-- custom success page -->
-                <input type="hidden" name="_next" value="">
-
-                <div class="inputBox">
-                    <input type="text" placeholder="Your Name" name="Name:" required autocomplete="off">
-                    <input type="tel" placeholder="Your Number" name="Number:" required autocomplete="off">
-                </div>
-                <div class="inputBox">
-                    <input type="text" placeholder="Email" name="Email:" required autocomplete="off">
-                    <select name="interested&nbsp;department:" id="" required>
-                        <option value="" selected disabled>Interested department</option>
-                        <option value="Mechanical">Mechanical</option>
-                        <option value="Electronics">Electronics</option>
-                        <option value="Computer science">Computer science</option>
-                    </select>
-                </div>
-                <textarea name="Message:" placeholder="Your message" id="" cols="30" rows="10" required autocomplete="off"></textarea>
-                <input type="submit" value="Submit" class="btn">
-            </form>
-        </div>
-    </section>
-    <!-- contact -->
-    
-    <!-- footer -->
-    <footer>
-        <div class="socials">
-            <a target="_blank" href="https://www.linkedin.com/company/achillius-sjec/?originalSubdomain=in"><i class="fa-brands fa-linkedin"></i></a>
-            <a target="_blank" href="https://www.instagram.com/teamachilliussjec/?hl=en"><i class="fa-brands fa-instagram"></i></a>
-            <a target="_blank" href="https://www.facebook.com/profile.php?id=100066447856039"><i class="fa-brands fa-facebook-square"></i></a>
-            <a target="_blank" href="https://www.youtube.com/channel/UCBric8Nx25guayXRucwqd_Q/featured"><i class="fa-brands fa-youtube"></i></a>
-        </div>
-        <div class="footerBottom">
-            <p>copyright &copy;<span id="currentYear"></span>. Designed and coded by <a target="_blank" href="https://www.linkedin.com/in/mohammed-shehzad-96225921b">Shehzad.</a></p>
-        </div>
-    </footer>
-    <!-- footer -->
-    <script src="script.js"></script>
 </body>
 </html>

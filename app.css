@@ -405,6 +405,7 @@ animation: landing-overlay 1.5s var(--easeout) 1s forwards;
     height:15rem;
 }
 
+
 #contact .box-container form .btn{
     padding: 0.7em 1.5em;
     font-size: 1.2rem;
@@ -516,4 +517,13 @@ footer .footerBottom a{
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
 
+    #contact .box-container form .inputBox input,
+    #contact .box-container form .inputBox select{
+        width:100%;
+    }
+    #contact .box-container form .btn-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }

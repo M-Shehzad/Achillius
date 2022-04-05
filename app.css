@@ -198,14 +198,15 @@ animation: landing-overlay 1.5s var(--easeout) 1s forwards;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    height: 100vh;
+    min-height: 100vh;
+    /* height: 100vh; */
 }
 
 #about .darkoverlay {
     position: absolute;
     z-index: -1;
     inset: 0;
-    opacity: 40%;
+    opacity: 45%;
     /* black overlay */
     background: rgb(0,0,0);
 }
@@ -229,6 +230,7 @@ animation: landing-overlay 1.5s var(--easeout) 1s forwards;
 
 #about .paragraph{
     margin-top:10em;
+    /* margin-top:auto 0; */
     color:#fff;
     text-align: center;
     font-size: clamp(1rem,2vw,1.2rem);
@@ -458,7 +460,7 @@ footer .footerBottom{
 }
 
 footer .footerBottom p{
-    font-size: 1rem;
+    font-size: .9rem;
 }
 
 footer .footerBottom a{

@@ -54,17 +54,18 @@ z-index: 1000;
 top: 0;
 left: 0;
 right: 0;
-padding: 0.5rem 4%;
+padding: 0.5em 4%;
 display: flex;
 justify-content: space-between;
 align-items: center;
 }
 
+
 header .logo {
 font-family: "Montserrat", sans-serif;
 display: flex;
 align-items: center;
-font-size: 2rem;
+font-size: clamp(1.5rem,2.5vw,2rem);
 cursor: pointer;
 }
 
@@ -83,37 +84,48 @@ font-weight: 600;
 }
 
 header nav a {
-/* border: 1px solid white; */
-color: #fff;
-padding: 0.5em 1.5em;
-border-radius: 0.5em;
+    font-size: 1rem;
+    color: #fff;
+    padding: 0.5em 1.5em;
+    border-radius: 0.5em;
 }
 
 header nav a:hover {
-background-color: var(--blue);
-color: var(--black);
+    background-color: var(--blue);
+    color: var(--black);
 }
 
 header .cta {
-padding: 0.2em 1.2em;
-border-radius: 5em;
-border: 0.1em solid var(--blue);
+    padding: 0.2em 1.2em;
+    border-radius: 5em;
+    border: 0.1em solid var(--blue);
 }
 
 header .cta:hover {
-background-color: rgba(0, 234, 255, 0.2);
-transform: translateY(-0.1em);
+    background-color: rgba(0, 234, 255, 0.2);
+    transform: translateY(-0.1em);
 }
 
 .sticky {
-background-color: var(--black);
+    background-color: var(--black);
 }
 
+header #menu-bars{
+    position:absolute;
+    color:white;
+    top:0.65rem;
+    right:1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 2rem;
+    cursor: pointer;
+}
 /* Home section */
 
 #home {
-/* position: relative; */
-/* height: 120vh; */
+    /* position: relative; */
+    /* height: 120vh; */
 }
 
 #home img{
@@ -177,7 +189,6 @@ animation: landing-overlay 1.5s var(--easeout) 1s forwards;
 /* About us section */
 
 #about{
-    overflow: hidden;
     background-color: var(--black);
     
     position: relative;
@@ -194,18 +205,16 @@ animation: landing-overlay 1.5s var(--easeout) 1s forwards;
     position: absolute;
     z-index: -1;
     inset: 0;
-    opacity: 30%;
+    opacity: 40%;
     /* black overlay */
     background: rgb(0,0,0);
 }
 
 .aboutSubtitle{
-    /* color: var(--blue); */
-    color:#00eaff
+    color:#00eaff;
+    /* color:var(--blue); */
 }
 .aboutTitle{
-    /* border:1px solid blue; */
-    
     color: white;
 }
 
@@ -219,6 +228,7 @@ animation: landing-overlay 1.5s var(--easeout) 1s forwards;
 }
 
 #about .paragraph{
+    margin-top:10em;
     color:#fff;
     text-align: center;
     font-size: clamp(1rem,2vw,1.2rem);
@@ -474,3 +484,36 @@ footer .footerBottom a{
     }
 }
 
+
+/* responsive navbar */
+@media (max-width:800px){
+    header{
+        padding:0.5em 0;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    header .logo{
+        margin-left: 2%;
+    }
+    header #menu-bars{
+        display: flex;
+    }
+    header nav{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position:absolute;
+        top:100%;
+        background-color: var(--black);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    header nav a{
+        border-radius: 0;
+        text-align: center;
+    }
+    header nav.active{
+        display: flex;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+}

@@ -1,3 +1,5 @@
+const navLinks = document.querySelector('header nav');
+const header = document.querySelector('header');
 document.addEventListener('DOMContentLoaded', (event) => {
     window.scrollTo(0, 0);
 });
@@ -5,17 +7,32 @@ document.addEventListener('DOMContentLoaded', (event) => {
 //navbar function
 let prevScrollPos = window.scrollY;
 window.addEventListener('scroll',()=>{
-    //navbar background changer
-    document.querySelector('header').classList.toggle('sticky',window.scrollY > 0);
-
     let currentScrollPos = window.scrollY;
+    //navbar background changer
+    header.classList.toggle('sticky',currentScrollPos> 0);
+    if(header.classList.contains('sticky')){
+        navLinks.style.backgroundColor='#323232';
+    }else{
+        navLinks.style.backgroundColor='transparent';
+    }
+
     if(currentScrollPos < prevScrollPos){
         document.querySelector('header').style.transform = 'translateY(0%)';
     }else{
-        document.querySelector('header').style.transform = 'translateY(-100%)';
+        //only push the navbar out if the navbar isnt open
+        if(!navLinks.classList.contains('active')){
+            document.querySelector('header').style.transform = 'translateY(-100%)';
+        }
     }
     prevScrollPos = currentScrollPos;
     // console.log(window.scrollY);
+})
+
+// responsive navbar
+const toggleButton = document.getElementById('menu-bars');
+
+toggleButton.addEventListener('click',()=>{
+    navLinks.classList.toggle('active');
 })
 
 

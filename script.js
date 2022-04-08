@@ -5,7 +5,7 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.from('.stg1',{
     scrollTrigger:{
         trigger:'#about',
-        markers:true,
+        // markers:true,
         start:'top center'
     },
     opacity:0,
@@ -19,7 +19,7 @@ gsap.from('.stg1',{
 gsap.from('.stg2',{
     scrollTrigger:{
         trigger:'#department',
-        markers:true,
+        // markers:true,
         start:'top center'
     },
     opacity:0,
@@ -30,7 +30,7 @@ gsap.from('.stg2',{
 gsap.from('.stg3',{
     scrollTrigger:{
         trigger:'#contact',
-        markers:true,
+        // markers:true,
         start:'top center'
     },
     opacity:0,

@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@300;400;500;700&display=swap");
 :root {
-  --black: #323232;
+  --black:#000;
   --blue: #1699ad;
   --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
   --heading:3rem;
@@ -35,7 +35,7 @@ section {
 .subtitle{
     text-align: center;
     font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: 200;
 }
 
 .title{
@@ -43,8 +43,10 @@ section {
     display: table;
     margin: 0 auto;
     font-size: var(--heading);
+    font-weight: 300;
     line-height: 1;
     text-align: center;
+
 }
 
 /* Navbar starts */
@@ -80,8 +82,9 @@ header a {
 text-transform: uppercase;
 color: white;
 text-decoration: none;
-font-weight: 600;
+font-weight: 400;
 }
+
 
 header nav a {
     font-size: 1rem;
@@ -106,7 +109,7 @@ header .cta:hover {
     transform: translateY(-0.1em);
 }
 
-.sticky {
+.colorChanger {
     background-color: var(--black);
 }
 
@@ -124,7 +127,7 @@ header #menu-bars{
 /* Home section */
 
 #home {
-    /* position: relative; */
+    position: relative;
     /* height: 120vh; */
 }
 
@@ -147,7 +150,7 @@ top:0;
 }
 #home .car {
 position: absolute;
-z-index: 2;
+z-index: 1;
 left: 0;
 bottom: 0;
 width: 100%;
@@ -163,8 +166,8 @@ font-family: "Montserrat", sans-serif;
 font-size: clamp(2.2rem,9vw,10rem);
 /* font-size: 2.2rem; */
 font-weight: 700;
-position: absolute;
-z-index: 1;
+position: fixed;
+z-index:0;
 top: 80%;
 left: 50%;
 transform: translateY(-35%) translateX(-50%);
@@ -174,6 +177,7 @@ animation: landing-h1 1s var(--easeout) 1s forwards;
 
 #home .darkoverlay {
 position: absolute;
+z-index: -1;
 inset: 0;
 opacity: 0%;
 /* black overlay */
@@ -185,6 +189,18 @@ background: linear-gradient(
 animation: landing-overlay 1.5s var(--easeout) 1s forwards;
 }
 
+#home .gradientOverlay{
+
+position: absolute;
+inset:0;
+bottom:0;
+width:100%;
+/* height:100%; */
+z-index: 10;
+
+background: linear-gradient(180deg, rgba(0, 0, 0, 0) 66.96%, #000000 95.87%);
+}
+
 
 /* About us section */
 
@@ -192,34 +208,27 @@ animation: landing-overlay 1.5s var(--easeout) 1s forwards;
     background-color: var(--black);
     
     position: relative;
-    z-index: -2;
+    /* z-index: -2;
     background: url(images/IMG_20200305_105924.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
     min-height: 100vh;
     /* height: 100vh; */
 }
 
-#about .darkoverlay {
-    position: absolute;
-    z-index: -1;
-    inset: 0;
-    opacity: 45%;
-    /* black overlay */
-    background: rgb(0,0,0);
-}
 
-.aboutSubtitle{
-    color:#00eaff;
-    /* color:var(--blue); */
+
+#about .subtitle{
+    /* color:#00eaff; */
+    color:var(--blue);
 }
-.aboutTitle{
+#about .title{
     color: white;
 }
 
-.aboutTitle .underline {
+#about .title .underline {
     background-color: #fff;
 }
 #about img{
@@ -234,6 +243,7 @@ animation: landing-overlay 1.5s var(--easeout) 1s forwards;
     color:#fff;
     text-align: center;
     font-size: clamp(1rem,2vw,1.2rem);
+    font-weight: 200;
     /* font-size:1rem; */
     line-height: 2;
 }
@@ -244,20 +254,20 @@ animation: landing-overlay 1.5s var(--easeout) 1s forwards;
     overflow: hidden;
     background-color: whitesmoke;
     position: relative;
-    z-index: 100;
+    /* z-index: 100; */
     /* transform: translateY(-5rem); */
 }
-.departmentSubtitle{
+#department .subtitle{
     margin-top:0.5em 0;
     padding: 0.2em 0.5em;
     color: var(--blue);
 }
-.departmentTitle{
+#department .title{
     color: var(--black);
 }
 
-.departmentTitle .underline {
-    background-color: #323232;
+#department .title .underline {
+    background-color: var(--black);
 }
 
 
@@ -284,10 +294,12 @@ animation: landing-overlay 1.5s var(--easeout) 1s forwards;
 
     margin:3rem 0 0rem;
     font-size: 1.7rem;
+    font-weight: 400;
 }
 
 #department .box p{
     font-size: clamp(0.8rem,2vw,1rem);
+    font-weight: 200;
     line-height: 2;
     color:#969696;
     /* color:#5f5f5f; */
@@ -311,6 +323,7 @@ animation: landing-overlay 1.5s var(--easeout) 1s forwards;
 
 /* contact */
 #contact{
+    position: relative;
     background-color: var(--black);
 }
 
@@ -342,6 +355,7 @@ animation: landing-overlay 1.5s var(--easeout) 1s forwards;
 
 #contact .box-container .box h3{
     font-size: 1.2rem;
+    font-weight: 300;
     color: white;
 }
 
@@ -375,6 +389,7 @@ animation: landing-overlay 1.5s var(--easeout) 1s forwards;
 #contact .box-container form textarea,
 #contact .box-container form select{
     font-size: 1.2rem;
+    font-weight: 200;
     outline:none;
     border: none;
     color:white;
@@ -413,11 +428,12 @@ animation: landing-overlay 1.5s var(--easeout) 1s forwards;
     font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 2.5px;
-    font-weight: 500;
+    font-weight: 400;
     color: #fff;
     background-color: var(--black);
     border: none;
     border-radius: 45px;
+    border: 1px solid white;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease 0s;
     cursor: pointer;
@@ -425,6 +441,7 @@ animation: landing-overlay 1.5s var(--easeout) 1s forwards;
 }
 
 #contact .box-container form .btn:hover {
+border: none;
 background-color: rgb(0, 191, 208);
 box-shadow: 0px 15px 20px rgba(0, 191, 208, 0.2);
 color: #fff;

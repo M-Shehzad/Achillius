@@ -9,12 +9,12 @@ let prevScrollPos = window.scrollY;
 window.addEventListener('scroll',()=>{
     let currentScrollPos = window.scrollY;
     //navbar background changer
-    header.classList.toggle('sticky',currentScrollPos> 0);
-    if(header.classList.contains('sticky')){
-        navLinks.style.backgroundColor='#323232';
-    }else{
-        navLinks.style.backgroundColor='transparent';
-    }
+    header.classList.toggle('colorChanger',currentScrollPos> 0);
+    // if(navLinks.classList.contains('active') || header.classList.contains('colorChanger')){
+    //     navLinks.style.backgroundColor='#000';
+    // }else{
+    //     navLinks.style.backgroundColor='transparent';
+    // }
 
     if(currentScrollPos < prevScrollPos){
         document.querySelector('header').style.transform = 'translateY(0%)';
@@ -30,8 +30,8 @@ window.addEventListener('scroll',()=>{
 
 // responsive navbar
 const toggleButton = document.getElementById('menu-bars');
-
 toggleButton.addEventListener('click',()=>{
+    header.classList.add('colorChanger');
     navLinks.classList.toggle('active');
 })
 

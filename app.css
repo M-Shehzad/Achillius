@@ -319,6 +319,35 @@ background: linear-gradient(180deg, rgba(0, 0, 0, 0) 66.96%, #000000 95.87%);
 #department .box:hover img{
     filter: invert(100%);
 }
+
+
+#department .btn{
+    display: inline-block;
+    margin-top:1em;
+}
+#department .btn a{
+    text-decoration: none;
+    color:var(--black);
+    font-size: 1rem;
+    border: 1px solid var(--black);
+    padding: 0.5em 1em;
+    border-radius: 5px 0 0 5px;
+}
+#department .btn i{
+    font-size: 1rem;
+    padding: 0.7em;
+    border: 1px solid var(--black);
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+}
+#department .box:hover .btn>* {
+    border-color: white;
+    color:white;
+}
+#department .box .btn a:hover{
+    background-color: white;
+    color: var(--black);
+}
 /* department */
 
 /* contact */

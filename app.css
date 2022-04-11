@@ -2,6 +2,7 @@
 :root {
   --black:#000;
   --blue: #1699ad;
+  --light-color:#969696;
   --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
   --heading:3rem;
   --easeout:cubic-bezier(.26,.62,.45,.88);
@@ -39,7 +40,6 @@ section {
 }
 
 .title{
-    display: contents;
     display: table;
     margin: 0 auto;
     font-size: var(--heading);
@@ -47,6 +47,26 @@ section {
     line-height: 1;
     text-align: center;
 
+}
+
+.btn2{
+    display: inline-block;
+    margin-top:1em;
+}
+.btn2 a{
+    text-decoration: none;
+    color:var(--black);
+    font-size: 1rem;
+    border: 1px solid var(--black);
+    padding: 0.5em 1em;
+    border-radius: 5px 0 0 5px;
+}
+.btn2 i{
+    font-size: 1rem;
+    padding: 0.7em;
+    border: 1px solid var(--black);
+    border-left: none;
+    border-radius: 0 5px 5px 0;
 }
 
 /* Navbar starts */
@@ -301,7 +321,7 @@ background: linear-gradient(180deg, rgba(0, 0, 0, 0) 66.96%, #000000 95.87%);
     font-size: clamp(0.8rem,2vw,1rem);
     font-weight: 200;
     line-height: 2;
-    color:#969696;
+    color:var(--light-color);
     /* color:#5f5f5f; */
 }
 
@@ -321,30 +341,12 @@ background: linear-gradient(180deg, rgba(0, 0, 0, 0) 66.96%, #000000 95.87%);
 }
 
 
-#department .btn{
-    display: inline-block;
-    margin-top:1em;
-}
-#department .btn a{
-    text-decoration: none;
-    color:var(--black);
-    font-size: 1rem;
-    border: 1px solid var(--black);
-    padding: 0.5em 1em;
-    border-radius: 5px 0 0 5px;
-}
-#department .btn i{
-    font-size: 1rem;
-    padding: 0.7em;
-    border: 1px solid var(--black);
-    border-left: none;
-    border-radius: 0 5px 5px 0;
-}
-#department .box:hover .btn>* {
+
+#department .box:hover .btn2>* {
     border-color: white;
     color:white;
 }
-#department .box .btn a:hover{
+#department .box .btn2 a:hover{
     background-color: white;
     color: var(--black);
 }
@@ -573,5 +575,110 @@ footer .footerBottom a{
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+}
+
+
+/* -------Departments----------- */
+
+/* department hero */
+#department-hero{
+    background-color: white;
+    min-height: 100vh;
+    border-bottom: 1px solid var(--black);
+}
+#department-hero h1{
+    /* color: white; */
+    width:50%;
+    margin:2em auto;
+    font-size: clamp(2rem,5vw,4rem);
+    font-weight: 300;
+    letter-spacing: 10px;
+    line-height: 1.5;
+    opacity:0;
+    transform: translateY(50);
+}
+
+#department-hero p{
+    opacity:0;
+    transform: translateY(50);
+    font-weight: 200;
+    color:var(--light-color);
+    text-align: center;
+    font-size: 1.3rem;
+    font-size: clamp(1rem,2vw,1.3rem);
+    line-height: 2;
+    margin:10rem auto;
+}
+/* department responsibilities */
+#responsibility{
+    color: white;
+}
+
+#responsibility .subtitle{
+    text-align: start;
+    font-weight: 100;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+#responsibility .line{
+    background-color: white;
+    height:1px;
+    width: 25%;
+}
+
+#responsibility ul{
+    margin:0 2em;
+    margin-top:3em;
+    column-count: 2;
+    column-gap: 17em;
+
+}
+
+
+#responsibility ul li{
+    display: inline-block;
+    position: relative;
+    width:90%;
+    font-weight: 200;
+    margin-bottom:2em;
+    line-height: 2;
+    letter-spacing: 1px;
+}
+#responsibility ul>li:before {
+     content:'•';
+     /* font-size: 2rem; */
+     /* padding:0;
+     margin:0; */
+     position: absolute;
+     left:-20px;
+     /* top:-15px; */
+     /* margin-right:0.5em;  */
+}
+
+#responsibility .btn2{
+    margin-left: 2em;
+}
+
+#responsibility .btn2 a{
+    padding-left:2em;
+    padding-right:2em;
+    color:white;
+    border: 1px solid white;
+}
+#responsibility .btn2 i{
+    border: 1px solid white;
+}
+#responsibility .btn2 a:hover{
+    background-color: white;
+    color:var(--black);
+}
+
+@media (max-width:800px) {
+    #responsibility ul{
+        column-count: 1;
+    }
+    #responsibility .line{
+        width:50%;
     }
 }

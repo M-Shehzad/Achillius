@@ -631,7 +631,7 @@ footer .footerBottom a{
     margin:0 2em;
     margin-top:3em;
     column-count: 2;
-    column-gap: 17em;
+    column-gap: clamp(10rem,10vw,17rem);
 
 }
 

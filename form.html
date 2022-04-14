@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css">
+    <title>Recruitment</title>
+</head>
+<body>
+     <!-- contact -->
+     <section id="contact" class="section">
+        <p class="subtitle contactSubtitle stg3">want to join us?</p>
+        <h2 class="title contactTitle stg3">Recruitment <span class="underline"></span></h2>
+        <div class="box-container">
+            <!-- <div class="box stg3">
+                <h3>Address</h3>
+                <p>St Joseph Engineering College, Vamanjoor 575028, Mangalore, Karnataka 575002, IN</p>
+                <h3>Email</h3>
+                <p>achillius@gmail.com</p>
+                <h3>phone</h3>
+                <p>+91 6969696969</p>
+            </div> -->
+            <form autocomplete="off" action="https://formsubmit.co/acc284b57368c36fed4f7e7a5f5e5dd2" method="POST" class="stg3">
+                <!-- honey pot -->
+                <input type="text" name="_honey" style="display: none;">
+                <!-- disable captcha -->
+                <input type="hidden" name="_captcha" value="false">
+
+                <!-- custom success page -->
+                <input type="hidden" name="_next" value="https://m-shehzad.github.io/Achillius/success.html">
+
+                <input type="hidden" name="_subject" value="Recruitment Form">
+
+                <div class="inputBox">
+                    <input type="text" placeholder="Your Name" name="Name" required autocomplete="off">
+                    <input type="tel" placeholder="Your Number" name="Number" required autocomplete="off">
+                </div>
+                <div class="inputBox">
+                    <input type="text" placeholder="Email" name="Email" required autocomplete="off">
+                    <select name="interested&nbsp;department" id="" required>
+                        <option value="" selected disabled>Interested department</option>
+                        <option value="Mechanical">Mechanical</option>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Computer science">Computer science</option>
+                    </select>
+                </div>
+                <textarea name="Message" placeholder="Your message" id="" cols="30" rows="10" required autocomplete="off"></textarea>
+                <div class="btn-container">
+                    <input type="submit" value="Submit" class="btn">
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- contact -->
+</body>
+</html>

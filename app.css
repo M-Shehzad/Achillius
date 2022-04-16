@@ -481,6 +481,26 @@ transform: translateY(-1px);
 footer{
     text-align:center;
 }
+footer .info{
+    margin:2em 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+footer .info .info-box>*{
+    color:white;
+    text-align: start;
+}
+
+footer .info .info-box h3{
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+footer .info .info-box p{
+    color: #5f5f5f;
+    margin:0.5rem 0;
+}
 
 footer .socials a{
     font-size: 2rem;
@@ -559,6 +579,9 @@ footer .footerBottom a{
     header nav.active{
         display: flex;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    footer .info{
+        flex-direction: column;
     }
 }
 

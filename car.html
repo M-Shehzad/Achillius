@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raptor v1.0</title> 
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="app.css">
+
+</head>
+<body>
+    <section class="car-hero raptor1">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide ">
+                    <div class="content">
+                        <h1>AIR 17</h1>
+                        <span>ESVC virtual rounds</span>
+                    </div>
+                </div>
+                <div class="swiper-slide ">
+                    <div class="content">
+                        <h1>AIR 17</h1>
+                        <span>ESVC virtual rounds</span>
+                    </div>
+                </div>
+                <div class="swiper-slide ">
+                    <div class="content">
+                        <h1>AIR 17</h1>
+                        <span>ESVC virtual rounds</span>
+                    </div>
+                </div>
+                <div class="swiper-slide ">
+                    <div class="content">
+                        <h1>AIR 17</h1>
+                        <span>ESVC virtual rounds</span>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <section class="car">
+        <h1 class="title">Raptor v1.0</h1>
+        <div class="para-container">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero accusantium nihil rerum sed, pariatur dolores est soluta assumenda possimus ex!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero accusantium nihil rerum sed, pariatur dolores est soluta assumenda possimus ex!</p>
+        </div>
+    </section>
+    <section class="news">
+        <h1 class="subtitle">News</h1>
+        <div class="line"></div>
+        <div class="box-container">
+            <a class="box" href="">
+                <img src="/images/20211228_123528.jpg" alt="">
+                <div class="details">
+                    <h3>BBC news</h3>
+                </div>
+            </a>
+            <a class="box" href="">
+                <img src="/images/20211228_123528.jpg" alt="">
+                <div class="details">
+                    <h3>cracked news</h3>
+                </div>
+            </a>
+            <a class="box" href="">
+                <img src="/images/20211228_123528.jpg" alt="">
+                <div class="details">
+                    <h3>BBC news</h3>
+                </div>
+            </a>
+        </div>
+    </section>
+    <section class="gallery">
+        <h1 class="subtitle">Gallery</h1>
+        <div class="line"></div>
+
+    </section>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          spaceBetween: 30,
+          centeredSlides: true,
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      </script>
+</body>
+</html>

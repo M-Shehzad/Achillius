@@ -727,6 +727,8 @@ footer .footerBottom a{
     border-left: 2px solid var(--black);
     padding-left:.5em;
     margin:-0.5em 0;
+    opacity: 0;
+    transform: translateY(50px);
     
 }
 .raptor1 .content h1{
@@ -768,7 +770,7 @@ footer .footerBottom a{
 /* car news */
 .news{
     background-color: whitesmoke;
-    min-height: 100vh;
+    min-height:fit-content;
 }
 .news .subtitle{
     /* color: white; */
@@ -789,6 +791,7 @@ footer .footerBottom a{
     grid-gap: 2em;
 }
 .news .box-container .box{
+    position:relative;
     text-decoration: none;
     color: var(--black);
     border-radius: 1rem;
@@ -796,12 +799,12 @@ footer .footerBottom a{
     overflow: hidden;
 }
 .news .box-container .box:hover{
-    transform: translateY(-5px);
+    transform: translateY(-3px);
     opacity: 0.9;
 }
 
 .news .box-container .box:active{
-    transform: translateY(7px);
+    transform: translateY(1px);
     
 }
 .news img{
@@ -809,11 +812,17 @@ footer .footerBottom a{
     width: 100%;
 }
 .news .box-container .box h3{
+    position:absolute;
+    bottom:0;
+    width:100%;
     font-weight: 400;
     text-align: center;
     padding: 0.5em 1em;
+    opacity: 0;
+    color:white;
 }
 .news .box-container .box:hover h3{
+    opacity: 1;
     background-color: var(--black);
     color: white;
 }
@@ -832,6 +841,19 @@ footer .footerBottom a{
     width: 25%;
 }
 
+.gallery .box-container{
+    margin:2em 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 2em;
+}
+.gallery .box-container img{
+    width:100%;
+}
+
+.gallery .box-container img:hover{
+    opacity: 0.6;
+}
 
 @media (max-width:800px) {
     #responsibility ul{

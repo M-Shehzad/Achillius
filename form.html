@@ -51,7 +51,7 @@
     <script>
         let input = document.querySelectorAll(".focus");
         input.forEach((e)=>{
-            e.style.borderColor='grey';
+            e.style.borderColor='#5f5f5f';
 
             e.addEventListener('focus',(e)=>{
                 e.target.style.borderColor="white";
@@ -61,12 +61,12 @@
                     e.target.style.borderColor="white";
                 }
                 else{
-                    e.target.style.borderColor="grey";
+                    e.target.style.borderColor="#5f5f5f";
                 }
             })
             e.addEventListener('focusout',(e)=>{
                 if(!e.target.value){
-                    e.target.style.borderColor="grey";
+                    e.target.style.borderColor="#5f5f5f";
                 }
             })
         })

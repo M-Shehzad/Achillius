@@ -871,7 +871,8 @@ footer .footerBottom a{
     box-shadow: var(--box-shadow);
     display: inline-block;
     position: relative;
-    height:10rem;
+    /* height:10rem; */
+    height:clamp(8rem,26vw,10rem);
     margin:1em;
 }
 .news ul li a{
@@ -894,6 +895,7 @@ footer .footerBottom a{
 }
 .news ul li .time h2{
     font-size: 2rem;
+    font-weight: 400;
 }
 .news ul li .time span{
     font-size: 1.5rem;
@@ -915,7 +917,7 @@ footer .footerBottom a{
     /* margin-left:.5em; */
     color:var(--light-color);
     font-weight: 200;
-    font-size: .9rem;
+    font-size: clamp(.7rem,2vw,.9rem);
 }
 
 /* news */

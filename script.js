@@ -46,9 +46,6 @@ gsap.from('.stg3',{
 
 const navLinks = document.querySelector('header nav');
 const header = document.querySelector('header');
-// document.addEventListener('DOMContentLoaded', (event) => {
-//     window.scrollTo(0, 0);
-// });
 
 //navbar function
 let prevScrollPos = window.scrollY;
@@ -56,11 +53,6 @@ window.addEventListener('scroll',()=>{
     let currentScrollPos = window.scrollY;
     //navbar background changer
     header.classList.toggle('colorChanger',currentScrollPos> 0);
-    // if(navLinks.classList.contains('active') || header.classList.contains('colorChanger')){
-    //     navLinks.style.backgroundColor='#000';
-    // }else{
-    //     navLinks.style.backgroundColor='transparent';
-    // }
 
     if(currentScrollPos < prevScrollPos){
         document.querySelector('header').style.transform = 'translateY(0%)';

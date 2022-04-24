@@ -30,14 +30,14 @@
                 <input type="text" placeholder="Your Name" name="Name" required autocomplete="off">
                 <input type="tel" placeholder="Your Number" name="Number" required autocomplete="off">
                 <input type="text" placeholder="Email" name="Email" required autocomplete="off">
-                <select name="interested&nbsp;department" id="" required>
+                <select name="interested&nbsp;department" required>
                     <option value="" selected disabled>Interested department</option>
                     <option value="Mechanical">Mechanical</option>
                     <option value="Electronics">Electrical</option>
                     <option value="Computer science">Electronics & Computer Science</option>
                 </select>
-                <input type="text" placeholder="CV/Resume/Portfolio URL (optional)" name="CV" autocomplete="off">
-                <input type="text" placeholder="LinkedIn URL (optional)" name="Linkedin" autocomplete="off">
+                <input class='focus'type="text" placeholder="CV/Resume/Portfolio URL (optional)" name="CV" autocomplete="off">
+                <input class='focus' type="text" placeholder="LinkedIn URL (optional)" name="Linkedin" autocomplete="off">
                 <textarea name="Message"
                     placeholder="Why do you want to join us? (You can also mention your career interests and skills here)"
                     id="" cols="30" rows="10" required autocomplete="off"></textarea>
@@ -48,6 +48,29 @@
         </div>
     </section>
     <!-- contact -->
+    <script>
+        let input = document.querySelectorAll(".focus");
+        input.forEach((e)=>{
+            e.style.borderColor='grey';
+
+            e.addEventListener('focus',(e)=>{
+                e.target.style.borderColor="white";
+            })
+            e.addEventListener('input',(e)=>{
+                if(e.target.value){
+                    e.target.style.borderColor="white";
+                }
+                else{
+                    e.target.style.borderColor="grey";
+                }
+            })
+            e.addEventListener('focusout',(e)=>{
+                if(!e.target.value){
+                    e.target.style.borderColor="grey";
+                }
+            })
+        })
+    </script>
 </body>
 
 </html>

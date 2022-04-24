@@ -39,17 +39,20 @@ gsap.from('.stg3',{
     duration:.5
 })
 
-// gsap.from('.box',{
-//     scrollTrigger:{
-//         trigger:'.box',
-//         markers:true,
-//         start:'top center'
-//     },
-//     opacity:0,
-//     y:50,
-//     stagger:.2,
-//     duration:.5
-// })
+
+gsap.from('.stg3',{
+    scrollTrigger:{
+        trigger:'#cars',
+        // markers:true,
+        start:'top center'
+    },
+    opacity:0,
+    y:50,
+    stagger:.3,
+    duration:.5
+})
+
+
 
 
 const navLinks = document.querySelector('header nav');

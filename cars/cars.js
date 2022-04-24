@@ -32,12 +32,13 @@ var swiper = new Swiper(".mySwiper", {
 gsap.to('.raptor1 .swiper-slide .content',{
     opacity:100,
     y:-50,
-    duration:1.5
+    duration:1.5,
+    delay:0.5
 })
 
-gsap.from('.car  *',{
+gsap.from('.car-details  *',{
     scrollTrigger:{
-        trigger:'.car',
+        trigger:'.car-details',
         // markers:true,
         start:'top center'
     },

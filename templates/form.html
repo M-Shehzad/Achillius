@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="../static/css/app.css">
     <title>Careers</title>
 </head>
 
 <body>
+    {% include 'navbar.html' %}
     <!-- contact -->
     <section id="contact" class="section">
         <!-- <p class="subtitle contactSubtitle stg3">want to join us?</p> -->
@@ -23,7 +24,7 @@
                 <input type="hidden" name="_captcha" value="false">
 
                 <!-- custom success page -->
-                <input type="hidden" name="_next" value="https://m-shehzad.github.io/Achillius/success.html">
+                <input type="hidden" name="_next" value="/success.html">
 
                 <input type="hidden" name="_subject" value="Recruitment Form">
 
@@ -47,6 +48,7 @@
             </form>
         </div>
     </section>
+    {% include 'footer.html' %}
     <!-- contact -->
     <script>
         let input = document.querySelectorAll(".focus");

@@ -8,10 +8,11 @@
     <link
     rel="stylesheet"
     href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="../app.css">
-    <link rel="stylesheet" href="lightbox.css">
+    <link rel="stylesheet" href="../../static/css/app.css">
+    <link rel="stylesheet" href="../../static/css/lightbox.css">
 </head>
 <body>
+    {% include 'navbar.html' %}
     <section class="car-hero raptor1">
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
@@ -96,25 +97,26 @@
         <h1 class="subtitle stg">Gallery</h1>
         <div class="line stg"></div>
         <div class="box-container">
-                <a class="stg" href="../images/20211228_123528.jpg" data-lightbox="models" data-title="custom caption">
-                    <img src="../images/20211228_123528.jpg" alt="">
+                <a class="stg" href="../../static/images/20211228_123528.jpg" data-lightbox="models" data-title="custom caption">
+                    <img src="../../static/images/20211228_123528.jpg" alt="">
                 </a>
-                <a class="stg" href="../images/20211228_123528.jpg" data-lightbox="models" data-title="custom caption">
-                    <img src="../images/20211228_123528.jpg" alt="">
+                <a class="stg" href="../../static/images/20211228_123528.jpg" data-lightbox="models" data-title="custom caption">
+                    <img src="../../static/images/20211228_123528.jpg" alt="">
                 </a>
-                <a class="stg" href="../images/20211228_123528.jpg" data-lightbox="models" data-title="custom caption">
-                    <img src="../images/20211228_123528.jpg" alt="">
+                <a class="stg" href="../../static/images/20211228_123528.jpg" data-lightbox="models" data-title="custom caption">
+                    <img src="../../static/images/20211228_123528.jpg" alt="">
                 </a>
-                <a class="stg" href="../images/20211228_123528.jpg" data-lightbox="models" data-title="custom caption">
-                    <img src="../images/20211228_123528.jpg" alt="">
+                <a class="stg" href="../../static/images/20211228_123528.jpg" data-lightbox="models" data-title="custom caption">
+                    <img src="../../static/images/20211228_123528.jpg" alt="">
                 </a>
-                <a class="stg" href="../images/20211228_123528.jpg" data-lightbox="models" data-title="custom caption">
-                    <img src="../images/20211228_123528.jpg" alt="">
+                <a class="stg" href="../../static/images/20211228_123528.jpg" data-lightbox="models" data-title="custom caption">
+                    <img src="../../static/images/20211228_123528.jpg" alt="">
                 </a>
                 
         </div>
 
     </section>
+    {% include 'footer.html' %}
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="lightbox-plus-jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js"></script>

@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, session
+import pytz
 import requests
 from datetime import datetime
 
@@ -48,14 +49,14 @@ def mgmt():
 @app.route("/recruitment", methods=["POST", "GET"])
 def recruitment():
     if request.method == "POST":
-        url = "https://discord.com/api/webhooks/968060786255740958/CnJ_CCRUeUseXM6MuwtIM8wwEO0M599yqB1aHMf1lBR1xFmIAzxkRLtE0rD9KSg9WUkr"  # webhook url
-        data = {"content": "Automated message",
-                "username": "application form",
+        url = "https://discord.com/api/webhooks/967857205477007400/UVZEW3zQKIePnbmkLE_EgCK4R6k3XkiVFoesxSZ_yi_JOZTB1uznTlA-Bp4V9FnqB4vl"  # webhook url
+        data = {"content": "",
+                "username": "Recruitment bot",
                 "embeds": [
                     {
                         "title": "Recruitment Form",
-                        "color": 15258703,
-                        "timestamp": str(datetime.now()),
+                        "color": 980461,
+                        "timestamp": str(datetime.now(pytz.timezone('Asia/Kolkata'))),
                         "fields": [
                             {
                                 "name": "Name",

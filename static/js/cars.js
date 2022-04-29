@@ -29,7 +29,7 @@ var swiper = new Swiper(".mySwiper", {
 //     stagger:.3,
 //     duration:.5
 // })
-gsap.to('.raptor1 .swiper-slide .content',{
+gsap.to('.car-hero .swiper-slide .content',{
     opacity:100,
     y:-50,
     duration:1.5,

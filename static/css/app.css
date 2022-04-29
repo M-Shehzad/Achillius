@@ -782,6 +782,29 @@ footer .footerBottom a{
     padding:0;
     background-color: white;
 }
+.car-hero .swiper-slide .content{
+    position: absolute;
+    top:30%;
+    left:10%;
+    width: 60%;
+    border-left: 2px solid var(--black);
+    padding-left:.5em;
+    margin:-0.5em 0;
+    opacity: 0;
+    transform: translateY(50px);
+    
+}
+.car-hero .content h1{
+    line-height: .8;
+    /* padding-top:.2em; */
+    font-size: clamp(3rem,8vw,8rem);
+    font-weight: 400;
+}
+.car-hero .content span{
+    font-size: clamp(1.5rem,3vw,5rem);
+    padding:0;
+    
+}
 /* Raptor1 */
 .raptor1 .swiper-slide{
     height: 100vh;
@@ -811,29 +834,6 @@ footer .footerBottom a{
     
 }
 
-.raptor1 .swiper-slide .content{
-    position: absolute;
-    top:30%;
-    left:10%;
-    width: 60%;
-    border-left: 2px solid var(--black);
-    padding-left:.5em;
-    margin:-0.5em 0;
-    opacity: 0;
-    transform: translateY(50px);
-    
-}
-.raptor1 .content h1{
-    line-height: .8;
-    /* padding-top:.2em; */
-    font-size: clamp(3rem,8vw,8rem);
-    font-weight: 400;
-}
-.raptor1 .content span{
-    font-size: clamp(1.5rem,3vw,5rem);
-    padding:0;
-    
-}
 /* Raptor1 */
 /* Raptor2 */
 .raptor2 .swiper-slide{
@@ -864,29 +864,6 @@ footer .footerBottom a{
     
 }
 
-.raptor2 .swiper-slide .content{
-    position: absolute;
-    top:30%;
-    left:10%;
-    width: 60%;
-    border-left: 2px solid var(--black);
-    padding-left:.5em;
-    margin:-0.5em 0;
-    opacity: 0;
-    transform: translateY(50px);
-    
-}
-.raptor2 .content h1{
-    line-height: .8;
-    /* padding-top:.2em; */
-    font-size: clamp(3rem,8vw,8rem);
-    font-weight: 400;
-}
-.raptor2 .content span{
-    font-size: clamp(1.5rem,3vw,5rem);
-    padding:0;
-    
-}
 /* Raptor2 */
 /* car hero */
 /* car info */

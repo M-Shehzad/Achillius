@@ -782,12 +782,30 @@ footer .footerBottom a{
     padding:0;
     background-color: white;
 }
-
+/* Raptor1 */
 .raptor1 .swiper-slide{
     height: 100vh;
 }
-.raptor1 .swiper-slide{
-    background:linear-gradient(0deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url("../images/20211228_123528.jpg");
+.raptor1 .swiper-slide:nth-child(1){
+    background:linear-gradient(0deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url("../images/IMG_6996.JPG");
+    background-size: cover;
+    background-position: center;
+    
+}
+.raptor1 .swiper-slide:nth-child(2){
+    background:linear-gradient(0deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url("../images/IMG_7069.JPG");
+    background-size: cover;
+    background-position: center;
+    
+}
+.raptor1 .swiper-slide:nth-child(3){
+    background:linear-gradient(0deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url("../images/IMG_6640.JPG");
+    background-size: cover;
+    background-position: center;
+    
+}
+.raptor1 .swiper-slide:nth-child(4){
+    background:linear-gradient(0deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url("../images/IMG_6580.JPG");
     background-size: cover;
     background-position: center;
     
@@ -816,6 +834,60 @@ footer .footerBottom a{
     padding:0;
     
 }
+/* Raptor1 */
+/* Raptor2 */
+.raptor2 .swiper-slide{
+    height: 100vh;
+}
+.raptor2 .swiper-slide:nth-child(1){
+    background:linear-gradient(0deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url("../images/IMG_6828.JPG");
+    background-size: cover;
+    background-position: center;
+    
+}
+.raptor2 .swiper-slide:nth-child(2){
+    background:linear-gradient(0deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url("../images/IMG_6847.JPG");
+    background-size: cover;
+    background-position: center;
+    
+}
+.raptor2 .swiper-slide:nth-child(3){
+    background:linear-gradient(0deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url("../images/IMG_6640.JPG");
+    background-size: cover;
+    background-position: center;
+    
+}
+.raptor2 .swiper-slide:nth-child(4){
+    background:linear-gradient(0deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url("../images/IMG_6580.JPG");
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.raptor2 .swiper-slide .content{
+    position: absolute;
+    top:30%;
+    left:10%;
+    width: 60%;
+    border-left: 2px solid var(--black);
+    padding-left:.5em;
+    margin:-0.5em 0;
+    opacity: 0;
+    transform: translateY(50px);
+    
+}
+.raptor2 .content h1{
+    line-height: .8;
+    /* padding-top:.2em; */
+    font-size: clamp(3rem,8vw,8rem);
+    font-weight: 400;
+}
+.raptor2 .content span{
+    font-size: clamp(1.5rem,3vw,5rem);
+    padding:0;
+    
+}
+/* Raptor2 */
 /* car hero */
 /* car info */
 .car-details{

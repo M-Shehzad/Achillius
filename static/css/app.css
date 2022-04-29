@@ -942,12 +942,15 @@ footer .footerBottom a{
     list-style:none;
     background: #fff;
     box-sizing: border-box;
-    box-shadow: var(--box-shadow);
     display: inline-block;
     position: relative;
     /* height:10rem; */
     height:clamp(8rem,26vw,10rem);
     margin:1em;
+}
+.news ul li:hover{
+    box-shadow: var(--box-shadow);
+
 }
 .news ul li a{
     text-decoration: none;

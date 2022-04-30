@@ -1,16 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/app.css">
-    <title>Careers</title>
-</head>
-
-<body>
-    {% include 'navbar.html' %}
+{% extends "base.html" %}
+{% block title %}
+Careers
+{% endblock %}
+    {% block content %}
     <!-- contact -->
     <section id="contact" class="section">
         <!-- <p class="subtitle contactSubtitle stg3">want to join us?</p> -->
@@ -48,18 +40,19 @@
             </form>
         </div>
     </section>
-    {% include 'footer.html' %}
     <!-- contact -->
-    <script>
-        let input = document.querySelectorAll(".focus");
-        input.forEach((e)=>{
-            e.style.borderColor='#5f5f5f';
-
-            e.addEventListener('focus',(e)=>{
-                e.target.style.borderColor="white";
-            })
-            e.addEventListener('input',(e)=>{
-                if(e.target.value){
+{% endblock %}
+{% block script %}
+<script>
+    let input = document.querySelectorAll(".focus");
+    input.forEach((e)=>{
+        e.style.borderColor='#5f5f5f';
+        
+        e.addEventListener('focus',(e)=>{
+            e.target.style.borderColor="white";
+        })
+        e.addEventListener('input',(e)=>{
+            if(e.target.value){
                     e.target.style.borderColor="white";
                 }
                 else{
@@ -72,7 +65,5 @@
                 }
             })
         })
-    </script>
-</body>
-
-</html>
+        </script>
+{% endblock %}

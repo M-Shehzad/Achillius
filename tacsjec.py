@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for, session
 import pytz
 import requests
 from datetime import datetime
+from webhook import TacWebhook
 
 app = Flask(__name__)
 
@@ -49,55 +50,59 @@ def mgmt():
 @app.route("/recruitment", methods=["POST", "GET"])
 def recruitment():
     if request.method == "POST":
-        url = "https://discord.com/api/webhooks/967857205477007400/UVZEW3zQKIePnbmkLE_EgCK4R6k3XkiVFoesxSZ_yi_JOZTB1uznTlA-Bp4V9FnqB4vl"  # webhook url
-        data = {"content": "",
-                "username": "Recruitment bot",
-                "embeds": [
-                    {
-                        "title": "Recruitment Form",
-                        "color": 980461,
-                        "timestamp": str(datetime.now(pytz.timezone('Asia/Kolkata'))),
-                        "fields": [
-                            {
-                                "name": "Name",
-                                "value": request.form['Name'],
-                                "inline": False
-                            },
-                            {
-                                "name": "Number",
-                                "value": request.form['Number'],
-                                "inline": False
-                            },
-                            {
-                                "name": "Email",
-                                "value": request.form['Email'],
-                                "inline": False
-                            },
-                            {
-                                "name": "Interested department:",
-                                "value": request.form['department'],
-                                "inline": False
-                            },
-                            {
-                                "name": "CV URL:",
-                                "value": request.form['CV'] if request.form['CV'] else 'nil',
-                                "inline": False
-                            },
-                            {
-                                "name": "Linkedin URL:",
-                                "value": request.form['Linkedin'] if request.form['Linkedin'] else 'nil',
-                                "inline": False
-                            },
-                            {
-                                "name": "Message",
-                                "value": request.form['Message'],
-                                "inline": False
-                            },
-                        ]
-                    }
-                ]}
-        result = requests.post(url, json=data, headers={
-                               "Content-Type": "application/json"})
+        # url = "https://discord.com/api/webhooks/967857205477007400/UVZEW3zQKIePnbmkLE_EgCK4R6k3XkiVFoesxSZ_yi_JOZTB1uznTlA-Bp4V9FnqB4vl"  # webhook url
+        # data = {"content": "",
+        #         "username": "Recruitment bot",
+        #         "embeds": [
+        #             {
+        #                 "title": "Recruitment Form",
+        #                 "color": 980461,
+        #                 "timestamp": str(datetime.now(pytz.timezone('Asia/Kolkata'))),
+        #                 "fields": [
+        #                     {
+        #                         "name": "Name",
+        #                         "value": request.form['Name'],
+        #                         "inline": False
+        #                     },
+        #                     {
+        #                         "name": "Number",
+        #                         "value": request.form['Number'],
+        #                         "inline": False
+        #                     },
+        #                     {
+        #                         "name": "Email",
+        #                         "value": request.form['Email'],
+        #                         "inline": False
+        #                     },
+        #                     {
+        #                         "name": "Interested department:",
+        #                         "value": request.form['department'],
+        #                         "inline": False
+        #                     },
+        #                     {
+        #                         "name": "CV URL:",
+        #                         "value": request.form['CV'] if request.form['CV'] else 'nil',
+        #                         "inline": False
+        #                     },
+        #                     {
+        #                         "name": "Linkedin URL:",
+        #                         "value": request.form['Linkedin'] if request.form['Linkedin'] else 'nil',
+        #                         "inline": False
+        #                     },
+        #                     {
+        #                         "name": "Message",
+        #                         "value": request.form['Message'],
+        #                         "inline": False
+        #                     },
+        #                 ]
+        #             }
+        #         ]}
+        # result = requests.post(url, json=data, headers={
+        #                        "Content-Type": "application/json"})
+
+        wh = TacWebhook()
+        wh.addEmbeds(request.form['Name'], request.form['Number'], request.form['Email'], request.form['department'], request.form['CV'], request.form['Linkedin'], request.form['Message'] )
+        result = wh.submitWebhook()
 
         try:
             result.raise_for_status()

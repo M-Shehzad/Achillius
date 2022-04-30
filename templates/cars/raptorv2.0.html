@@ -1,18 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raptor v2.0</title> 
+{% extends "base.html" %}
+    {% block stylesheet %}
     <link
     rel="stylesheet"
     href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="../../static/css/app.css">
     <link rel="stylesheet" href="../../static/css/lightbox.css">
-</head>
-<body>
-    {% include 'navbar.html' %}
+    {% endblock %}
+        {% block content %}
     <section class="car-hero raptor2">
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
@@ -119,11 +112,10 @@
         </div>
 
     </section>
-    {% include 'footer.html' %}
+    {% endblock %}
+    
+    {% block script %}
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="../../static/js/lightbox-plus-jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/ScrollTrigger.min.js"></script>
     <script src="../../static/js/cars.js"></script>
-</body>
-</html>
+    {% endblock %}

@@ -80,8 +80,11 @@ padding: 0.5em 4%;
 display: flex;
 justify-content: space-between;
 align-items: center;
-/* temporary navbar fix */
 background-color: var(--black);
+}
+.colorChanger {
+    /* for main page */
+    background-color: var(--black);
 }
 
 
@@ -131,9 +134,6 @@ header .cta:hover {
     transform: translateY(-0.1em);
 }
 
-.colorChanger {
-    background-color: var(--black);
-}
 
 header #menu-bars{
     position:absolute;
@@ -715,6 +715,7 @@ footer .footerBottom a{
 /* department responsibilities */
 #responsibility{
     color: white;
+    min-height: 100vh;
 }
 
 #responsibility .subtitle{

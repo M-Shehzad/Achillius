@@ -1,5 +1,5 @@
 //gsap animations
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 // let tl = new gsap.timeline();
 
 gsap.from('.stg1',{
@@ -39,38 +39,6 @@ gsap.from('.stg3',{
     y:50,
     stagger:.3,
     duration:.5
-})
-
-
-
-
-const navLinks = document.querySelector('header nav');
-const header = document.querySelector('header');
-
-//navbar function
-let prevScrollPos = window.scrollY;
-window.addEventListener('scroll',()=>{
-    let currentScrollPos = window.scrollY;
-    //navbar background changer
-    header.classList.toggle('colorChanger',currentScrollPos> 0);
-
-    if(currentScrollPos < prevScrollPos){
-        document.querySelector('header').style.transform = 'translateY(0%)';
-    }else{
-        //only push the navbar out if the navbar isnt open
-        if(!navLinks.classList.contains('active')){
-            document.querySelector('header').style.transform = 'translateY(-100%)';
-        }
-    }
-    prevScrollPos = currentScrollPos;
-    // console.log(window.scrollY);
-})
-
-// responsive navbar
-const toggleButton = document.getElementById('menu-bars');
-toggleButton.addEventListener('click',()=>{
-    header.classList.add('colorChanger');
-    navLinks.classList.toggle('active');
 })
 
 

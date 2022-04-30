@@ -1,20 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../../static/images/White.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../../static/css/app.css">
-    <title>Career@Electrical</title>
-</head>
-
-<body>
-    {% include 'navbar.html' %}
+{% extends "base.html" %}
+    {% block content %}
     <section id="department-hero">
         <h1 class="title stg-E1">ELECTRICAL ENGINEER</h1>
         <p class="paragraph stg-E1">They are the nervous system of the entire electric vehicle anatomy. The major work
@@ -41,10 +26,7 @@
             <a href="/recruitment">Apply</a><i class="fa-solid fa-arrow-right"></i>
         </span>
     </section>
-    {% include 'footer.html' %}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/ScrollTrigger.min.js"></script>
-    <script src="../../static/js/department.js"></script>
-</body>
-
-</html>
+    {% endblock %}
+    {% block script %}
+        <script src="../../static/js/department.js"></script>
+    {% endblock %}

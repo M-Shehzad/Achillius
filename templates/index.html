@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+{% block stylesheet %}
+<style>
+    header{
+        background-color: transparent;
+    }
+</style>
+{% endblock %}
+{% block title %}
+Achillius
+{% endblock %}
+    {% block content %}
+    
+
+    <!-- landing section -->
+    <div id='home'>
+        <h1 class="heroTitle">Drive the future</h1>
+        <img class='carbg' src="../static/images/originalweb.webp" alt="">
+        <div class='darkoverlay'></div>
+        <img class='car' src="../static/images/car3.webp" alt="">
+        <div class="gradientOverlay"></div>
+    </div>
+    <!-- landing ends -->
+    <!-- About -->
+    <section id="about" class=" section">
+        <div class='darkoverlay'></div>
+        <!-- <img src="images\IMG_20200305_105924.jpg" alt=""> -->
+        <div class="details">
+            <!--<p class="subtitle stg1">who are we?</p>-->
+            <h2 class="title stg1">About Us<span class="underline"></span></h2>
+            <div class="para-container">
+
+                <p class="stg1">We are Team Achillius - a student group under <a href="https://www.sjec.ac.in" target="__blank">St Joseph
+                        Engineering College, Mangalore</a>. Every year, we design and manufacture a solar powered
+                    electric vehicle that competes in prestigious national level competitions. Students from multiple
+                    departments come together and get an intense experience as they undergo real world engineering
+                    challenges everyday. Apart from technical aspects, members gain invaluable business and project
+                    management skills.
+                </p>
+                <p class="stg1">Team Achillius was started in 2017 as the first of its kind in Mangalore. Since then,
+                    we have successfully built TWO electric solar vehicles and won many accolades. Our main event is the
+                    <a href="https://esvc.in/" target="__blank">Electric Solar Vehicle Championship</a> which is organised by <a
+                        href="https://imperialsociety.in/" target="__blank">Imperial Society of Innovative Engineers</a>
+                    and <a href="https://www.araiindia.com/" target="__blank">Automotive Research Association of India</a>.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- about ends -->
+    <!-- departments -->
+    <section id="department" class="section">
+        <!--<p class="subtitle stg2">What you can do</p>-->
+        <h2 class="title stg2">Departments<span class="underline"></span></h2>
+        <div class="box-container">
+            <div class="box stg2">
+                <img src="../static/images\system.svg" alt="">
+                <h3>Mechanical Engineering</h3>
+                <p>Although our car is run by motor, battery and solar panels, the overall structure from wheels to
+                    driver's seat, is designed and fabricated by Mechanical Engineers. </p>
+                <span class="btn2">
+                    <a href="/MechanicalEngineering">Read More</a><i class="fa-solid fa-arrow-right"></i>
+                </span>
+            </div>
+            <div class="box stg2">
+                <img src="../static/images/cpu.svg" alt="">
+                <h3>Electrical Engineering</h3>
+                <p>The department deals with everything that has current running through it. Responsible for design and
+                    development of LV & HV wiring harness and its components. </p>
+                <span class="btn2">
+                    <a href="/ElectricalEngineering">Read More</a><i class="fa-solid fa-arrow-right"></i>
+                </span>
+            </div>
+            <div class="box stg2">
+                <img src="../static/images/desktop.svg" alt="">
+                <h3>Electronics & Computer Science</h3>
+                <!-- <i class="fa-thin fa-laptop-code"></i> -->
+                <p>Cars look mostly made up of metal and plastic parts, while on the inside, its a complex world of
+                    electronics. Now, where there is a controller, there is a software that runs inside it.</p>
+                <span class="btn2">
+                    <a href="/ComputerEngineering">Read More</a><i class="fa-solid fa-arrow-right"></i>
+                </span>
+            </div>
+            <div class="box stg2">
+                <img src="../static/images\handshake.svg" alt="">
+                <h3>Management</h3>
+                <!-- <i class="fa-thin fa-laptop-code"></i> -->
+                <p>Cars look mostly made up of metal and plastic parts, while on the inside, its a complex world of
+                    electronics. Now, where there is a controller, there is a software that runs inside it.</p>
+                <span class="btn2">
+                    <a href="/Management">Read More</a><i class="fa-solid fa-arrow-right"></i>
+                </span>
+            </div>
+        </div>
+    </section>
+    <!-- departments -->
+    <!-- cars -->
+    <section id="cars">
+        <h1 class="title stg3">Cars</h1>
+        <div class="car">
+            <div class="content stg3">
+                <h2 class="subtitle">Raptor v1.0</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae amet iure quasi minus ipsa ducimus dolorum optio pariatur consequuntur unde!</p>
+                <span class="btn2">
+                    <a href="/v1.0">Read More</a><i class="fa-solid fa-arrow-right"></i>
+                </span>
+            </div>
+            <div class="car-img stg3">
+                <img src="../static/images/IMG_20200202_164413.jpg" alt="">
+            </div>
+        </div>
+        <div class="car">
+            <div class="content stg3">
+                <h2 class="subtitle">Raptor v2.0</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae amet iure quasi minus ipsa ducimus dolorum optio pariatur consequuntur unde!</p>
+                <span class="btn2">
+                    <a href="/v2.0">Read More</a><i class="fa-solid fa-arrow-right"></i>
+                </span>
+            </div>
+            <div class="car-img stg3">
+                <img src="../static/images/IMG_6990.JPG" alt="">
+            </div>
+        </div>
+        <div class="car">
+            <div class="content stg3">
+                <h2 class="subtitle">Raptor v3.0</h2>
+                <p>Coming Soon!</p>
+                <span class="btn2">
+                    <a href="/recruitment">Apply</a><i class="fa-solid fa-arrow-right"></i>
+                </span>
+            </div>
+            <div class="car-img stg3">
+                <!-- <div class="overlay"></div> -->
+                <img src="../static/images/IMG_20200202_164413.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- scripts -->
+
+    {% endblock %}
+    {% block script %}
+    <script src="../static/js/script.js"></script>
+    {% endblock %}

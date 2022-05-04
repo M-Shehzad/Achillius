@@ -389,7 +389,6 @@ background: linear-gradient(180deg, rgba(0, 0, 0, 0) 66.96%, #000000 95.87%);
     /* transform: translateX(75px); */
 }
 #cars .car .car-img img{
-    transform: rotateY(180deg);
     width:100%;
 }
 

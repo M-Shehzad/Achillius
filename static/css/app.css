@@ -923,6 +923,7 @@ footer .footerBottom a{
     position: relative;
     /* height:10rem; */
     height:clamp(8rem,26vw,10rem);
+    width:100%;
     margin:1em;
 }
 .news ul li:hover{

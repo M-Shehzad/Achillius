@@ -810,19 +810,19 @@ footer .footerBottom a{
     height: 100vh;
 }
 .raptor1 .swiper-slide:nth-child(1){
-    background:linear-gradient(0deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url("../images/IMG_6996.JPG");
+    background:linear-gradient(0deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url("../images/IMG_5734.JPG");
     background-size: cover;
     background-position: center;
     
 }
 .raptor1 .swiper-slide:nth-child(2){
-    background:linear-gradient(0deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url("../images/IMG_7069.JPG");
+    background:linear-gradient(0deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url("../images/DSC_0245.JPG");
     background-size: cover;
     background-position: center;
     
 }
 .raptor1 .swiper-slide:nth-child(3){
-    background:linear-gradient(0deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url("../images/IMG_6640.JPG");
+    background:linear-gradient(0deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url("../images/IMG_5771.JPG");
     background-size: cover;
     background-position: center;
     
@@ -852,7 +852,7 @@ footer .footerBottom a{
     
 }
 .raptor2 .swiper-slide:nth-child(3){
-    background:linear-gradient(0deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url("../images/IMG_6640.JPG");
+    background:linear-gradient(0deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url("../images/IMG_6944.JPG");
     background-size: cover;
     background-position: center;
     

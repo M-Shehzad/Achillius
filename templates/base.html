@@ -217,6 +217,9 @@
         header.classList.add('colorChanger');
         navLinks.classList.toggle('active');
     })
+
+    //current year
+document.querySelector('#currentYear').innerText = new Date().getFullYear();
     </script>
     {% block script %}
     {% endblock %}

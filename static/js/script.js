@@ -56,6 +56,5 @@ gsap.from('.stg3',{
 //     })
 // }
 
-//current year
-document.querySelector('#currentYear').innerText = new Date().getFullYear();
+
 

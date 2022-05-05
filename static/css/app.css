@@ -689,7 +689,7 @@ footer .footerBottom a{
 }
 #department-hero h1{
     /* color: white; */
-    width:50%;
+    /* width:50%; */
     margin:2em auto;
     font-size: clamp(2rem,5vw,4rem);
     font-weight: 300;
@@ -810,25 +810,25 @@ footer .footerBottom a{
     height: 100vh;
 }
 .raptor1 .swiper-slide:nth-child(1){
-    background:linear-gradient(0deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url("../images/IMG_5734.JPG");
+    background:linear-gradient(0deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url("../images/IMG_5734.webp");
     background-size: cover;
     background-position: center;
     
 }
 .raptor1 .swiper-slide:nth-child(2){
-    background:linear-gradient(0deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url("../images/DSC_0245.JPG");
+    background:linear-gradient(0deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url("../images/DSC_0245.webp");
     background-size: cover;
     background-position: center;
     
 }
 .raptor1 .swiper-slide:nth-child(3){
-    background:linear-gradient(0deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url("../images/IMG_5771.JPG");
+    background:linear-gradient(0deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url("../images/IMG_5771.webp");
     background-size: cover;
     background-position: center;
     
 }
 .raptor1 .swiper-slide:nth-child(4){
-    background:linear-gradient(0deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url("../images/IMG_6580.JPG");
+    background:linear-gradient(0deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url("../images/IMG_6580.webp");
     background-size: cover;
     background-position: center;
     
@@ -840,25 +840,25 @@ footer .footerBottom a{
     height: 100vh;
 }
 .raptor2 .swiper-slide:nth-child(1){
-    background:linear-gradient(0deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url("../images/IMG_6828.JPG");
+    background:linear-gradient(0deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url("../images/IMG_6828.webp");
     background-size: cover;
     background-position: center;
     
 }
 .raptor2 .swiper-slide:nth-child(2){
-    background:linear-gradient(0deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url("../images/IMG_6847.JPG");
+    background:linear-gradient(0deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url("../images/IMG_6847.webp");
     background-size: cover;
     background-position: center;
     
 }
 .raptor2 .swiper-slide:nth-child(3){
-    background:linear-gradient(0deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url("../images/IMG_6944.JPG");
+    background:linear-gradient(0deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url("../images/IMG_6944.webp");
     background-size: cover;
     background-position: center;
     
 }
 .raptor2 .swiper-slide:nth-child(4){
-    background:linear-gradient(0deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url("../images/IMG_6580.JPG");
+    background:linear-gradient(0deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url("../images/IMG_6580.webp");
     background-size: cover;
     background-position: center;
     

@@ -910,7 +910,7 @@ footer .footerBottom a{
 .news ul{
     position: relative;
     margin:2em 0;
-    column-count: 2;
+    /* column-count: 1; */
     /* column-gap: clamp(2rem,5vw,10rem); */
     column-gap: 1rem;
     
@@ -919,11 +919,11 @@ footer .footerBottom a{
     list-style:none;
     background: #fff;
     box-sizing: border-box;
-    display: inline-block;
+    /* display: inline-block; */
     position: relative;
     /* height:10rem; */
     height:clamp(8rem,26vw,10rem);
-    width:100%;
+    width:40rem;
     margin:1em;
 }
 .news ul li:hover{

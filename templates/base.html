@@ -228,8 +228,8 @@
 document.querySelector('#currentYear').innerText = new Date().getFullYear();
     window.onload = ()=>{
         console.log('load event detected');
-        setTimeout(document.querySelector('.loading-wrapper').style.opacity='0',1000);
-        document.querySelector('.loading-wrapper').style.display='none';
+        document.querySelector('.loading-wrapper').style.opacity='0';
+        setTimeout(document.querySelector('.loading-wrapper').style.display='none',1000);
     }
     </script>
     {% block script %}

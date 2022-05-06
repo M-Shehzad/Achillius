@@ -226,12 +226,11 @@
 
     //current year
 document.querySelector('#currentYear').innerText = new Date().getFullYear();
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script>
-    $(window).load(function() {
-        $('.loading-wrapper').hide();
-    });
+    window.onload = ()=>{
+        console.log('load event detected');
+        setTimeout(document.querySelector('.loading-wrapper').style.opacity='0',1000);
+        document.querySelector('.loading-wrapper').style.display='none';
+    }
     </script>
     {% block script %}
     {% endblock %}

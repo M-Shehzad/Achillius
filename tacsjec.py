@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 import requests
+from flask_compress import Compress
 from webhook import TacWebhook
 
 app = Flask(__name__)
@@ -64,4 +65,6 @@ def recruitment():
 
 
 if __name__ == "__main__":
+    compress = Compress()
+    compress.init_app(app)
     app.run(debug=True)

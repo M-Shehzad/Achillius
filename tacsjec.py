@@ -1,7 +1,13 @@
+import email
+from email.message import EmailMessage
 from flask import Flask, render_template, request, redirect, url_for, session
 import requests
 from flask_compress import Compress
 from webhook import TacWebhook
+import smtplib
+
+EMAIL_ADDRESS = ""  # enter sender email's address here
+EMAIL_PASSWORD = ""  # enter sender email's password here
 
 app = Flask(__name__)
 
@@ -51,7 +57,8 @@ def recruitment():
     if request.method == "POST":
 
         wh = TacWebhook()
-        wh.addEmbeds(request.form['Name'], request.form['Number'], request.form['Email'], request.form['department'], request.form['CV'], request.form['Linkedin'], request.form['Message'] )
+        wh.addEmbeds(request.form['Name'], request.form['Number'], request.form['Email'],
+                     request.form['department'], request.form['CV'], request.form['Linkedin'], request.form['Message'])
         result = wh.submitWebhook()
 
         try:
@@ -59,6 +66,15 @@ def recruitment():
         except requests.exceptions.HTTPError as err:
             return err
         else:
+            msg = EmailMessage()
+            msg['Subject'] = 'Application Received'
+            msg['From'] = EMAIL_ADDRESS
+            msg['To'] = request.form['Email']
+            msg.add_alternative(render_template(
+                'emailTemplate.html', name=request.form['Name'], department=request.form['department']), subtype='html')
+            with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
+                smtp.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
+                smtp.send_message(msg)
             return render_template('success.html')
     else:
         return render_template('form.html')

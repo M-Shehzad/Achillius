@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank you!</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@300;400;500;700&display=swap");
+        * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        }
+        body{
+            background-color: black;
+        }
+        .template{
+            width:90%;
+            max-width: 50rem;
+            margin:1em auto;
+            /* padding:2em; */
+            background-color: white;
+        }
+        .head{
+            padding:1em;
+            background-color: whitesmoke;
+        }
+        .head img{
+            width:8rem;
+            display: block;
+            margin:0 auto;
+        }
+        .head h1{
+            font-size: 3rem;
+            font-weight: 500;
+            text-align: center;
+            display: table;
+            margin:.5em auto;
+            border-bottom: 1px solid #959595;
+        }
+        .content{
+            padding: 3rem;
+            margin:1rem 0;
+        }
+        .content h3{
+            margin-bottom:1em;
+            font-weight: 500;
+        }
+        .content p{
+            font-weight: 300;
+            color:#959595;
+        }
+        .content .regards{
+            margin-top:1.5em;
+        }
+        .footer{
+            background-color: whitesmoke;
+            padding-top:1em;
+        }
+        .footer .socials{
+            text-align: center;
+        }
+        .footer .socials a{
+            margin:0 1em;
+
+        }
+        .footer .socials a img{
+            width:2rem;
+            vertical-align:middle;
+        }
+        .footerBottom{
+            background-color: rgb(34, 34, 34);
+            color:white;
+            text-align: center;
+            margin:0.5em 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="template">
+        <div class="head">
+            <img src="https://i.ibb.co/g4ZZk5J/LOGO1-2.png" alt="LOGO1-2" border="0">
+            <h1>Application Received</h1>
+        </div>
+        <div class="content">
+            <h3>{{name}},</h3>
+            <p>Thank you for taking the time to apply for our position in {{department}}. We appreciate your interest in Team Achillius</p>
+            <p class="regards">
+                Thank you,<br>
+                Team Achillius
+            </p>
+        </div>
+        <div class="footer">
+            <div class="socials">
+                <a target="_blank" href="https://www.linkedin.com/company/achillius-sjec/?originalSubdomain=in"><img src="https://i.ibb.co/VL5F2zL/linkedin.png" alt="linkedin" border="0"></a>
+                <a target="_blank" href="https://www.instagram.com/teamachilliussjec/?hl=en"><img src="https://i.ibb.co/zSsFJfS/instagram.png" alt="instagram" border="0"></a>
+                <a target="_blank" href="https://www.facebook.com/profile.php?id=100066447856039"><img src="https://i.ibb.co/0GQcPc7/facebook.png" alt="facebook" border="0"></a>
+                <a target="_blank" href="https://www.youtube.com/channel/UCBric8Nx25guayXRucwqd_Q/featured"><img src="https://i.ibb.co/R9ybgH8/youtube.png" alt="youtube" border="0"></a>
+            </div>
+            <div class="footerBottom">
+                <p>Copyright &copy;<span id="currentYear">2022</span>. Team Achillius</p>
+                <!-- <p>copyright &copy;<span id="currentYear"></span>. Designed and coded by <a target="_blank" href="https://www.linkedin.com/in/mohammed-shehzad-96225921b">Shehzad.</a></p> -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

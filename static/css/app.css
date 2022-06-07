@@ -191,7 +191,7 @@ font-size: clamp(2.2rem,9vw,10rem);
 font-weight: 700;
 position: fixed;
 z-index:-1;
-top: 80%;
+top: 100%;
 left: 50%;
 transform: translateY(-35%) translateX(-50%);
 animation: landing-h1 1s var(--easeout) 1s forwards;
@@ -608,7 +608,7 @@ footer .footerBottom a{
 
 @keyframes landing-h1 {
     100%{
-        top:25%;
+        top:35%;
     }
 }
 

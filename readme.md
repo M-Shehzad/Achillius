@@ -1,5 +1,7 @@
 # Achillius-website 
 
+The website is deployed of heroku [here](https://achillius.herokuapp.com/)
+
 - This is the repository for the team achillius website. The website is built using the Flask framework
 
 - The website contains information about the team, its various departments, cars and a recruitment form.

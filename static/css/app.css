@@ -380,7 +380,7 @@ background: linear-gradient(180deg, rgba(0, 0, 0, 0) 66.96%, #000000 95.87%);
 #cars .car:nth-child(2n-1){
     flex-direction: row-reverse;
 }
-#cars .car .content{
+#cars .car ..content{
     width:50%;
 }
 #cars .car .car-img{
@@ -393,7 +393,7 @@ background: linear-gradient(180deg, rgba(0, 0, 0, 0) 66.96%, #000000 95.87%);
 }
 
 
-#cars .car .content{
+#cars .car ..content{
     padding:0 9%;
     display: flex;
     flex-direction: column;
@@ -401,7 +401,7 @@ background: linear-gradient(180deg, rgba(0, 0, 0, 0) 66.96%, #000000 95.87%);
     transform: translateY(-3rem);
 }
 
-#cars .car .content .subtitle{
+#cars .car ..content .subtitle{
     color: white;
     text-align: start;
     font-weight: 400;
@@ -409,15 +409,15 @@ background: linear-gradient(180deg, rgba(0, 0, 0, 0) 66.96%, #000000 95.87%);
     letter-spacing: 2px;
     padding:1em 0;
 }
-#cars .car .content p{
+#cars .car ..content p{
     font-weight: 200;
     color:var(--light-color);
 }
-#cars .car .content .btn2 *{
+#cars .car ..content .btn2 *{
     color:white;
     border-color: white;
 }
-#cars .car .content .btn2 a:hover{
+#cars .car ..content .btn2 a:hover{
     background-color: white;
     color: black;
 
@@ -606,7 +606,9 @@ footer .footerBottom a{
 }
 
 #page-404{
-    /* background-color: white; */
+    /* background-image: url(../images/IMG_6852.jpg);
+    background-size: cover;
+    background-position: 40%; */
     width:100%;
     height:100vh;
     display: flex;
@@ -617,16 +619,19 @@ footer .footerBottom a{
     opacity: 1;
     animation:none;
 }
-#page-404 div{
+#page-404 .content{
+    position: relative;
+    top: 100px;
     color: white;
     text-align: center;
 }
-#page-404 div h1{
+#page-404 .content h1{
     font-size: clamp(2.5rem, 5vw, 5rem);
 }
-#page-404 div p{
+#page-404 .content p{
     font-size: 1.2rem;
     font-weight: 500;
+    margin-bottom: 3em;
     /* color:var(--light-color); */
 }
 #page-404 .text-404{
@@ -737,7 +742,7 @@ transform: translateY(-2px);
     footer .socials a{
         font-size: 1.5rem;
     }
-    #cars .car .content{
+    #cars .car ..content{
         width: 100%;
     }
     #cars .car .car-img{
@@ -746,7 +751,7 @@ transform: translateY(-2px);
     #cars .car:nth-child(n){
         flex-direction: column-reverse;
     }
-    #cars .car .content{
+    #cars .car ..content{
         transform: translateY(0);
     }
 }
@@ -821,7 +826,7 @@ transform: translateY(-2px);
     letter-spacing: 1px;
 }
 #responsibility ul>li:before {
-    content:'•';
+    .content:'•';
     /* font-size: 2rem; */
     /* padding:0;
     margin:0; */
@@ -855,7 +860,7 @@ transform: translateY(-2px);
     padding:0;
     background-color: white;
 }
-.car-hero .swiper-slide .content{
+.car-hero .swiper-slide ..content{
     position: absolute;
     top:30%;
     left:10%;
@@ -867,13 +872,13 @@ transform: translateY(-2px);
     transform: translateY(50px);
     
 }
-.car-hero .content h1{
+.car-hero ..content h1{
     line-height: .8;
     /* padding-top:.2em; */
     font-size: clamp(3rem,8vw,8rem);
     font-weight: 400;
 }
-.car-hero .content span{
+.car-hero ..content span{
     font-size: clamp(1.5rem,3vw,5rem);
     padding:0;
     

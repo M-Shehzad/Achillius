@@ -1,6 +1,6 @@
 # Achillius-website 
 
-The website is deployed of heroku [here](https://achillius.herokuapp.com/)
+The website is deployed on heroku [here](https://achillius.herokuapp.com/)
 
 - This is the repository for the team achillius website. The website is built using the Flask framework
 

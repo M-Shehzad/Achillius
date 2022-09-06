@@ -83,7 +83,7 @@ def recruitment():
 
 @app.errorhandler(Exception)
 def error404(error):
-    return render_template('404.html', content = error.code), error.code
+    return render_template('404.html', content = error.code, stylesheet = "../static/images/IMG_6852.jpg"), error.code
 
 
 if __name__ == "__main__":

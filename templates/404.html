@@ -1,11 +1,10 @@
 {% extends "base.html" %} {% block stylesheet %}
 <style>
-  body {
-    /* background-image: url("/static/images/IMG_6852.jpg"); */
-    background-image: url({{ url_for('static', filename='images/IMG_6852.jpg') }});
-    background-size: cover;
-    background-position: 40%;
-  }
+    body{
+        background-image: url({{stylesheet}});
+        background-size: cover;
+        background-position: 40%;
+    }
 </style>
 {% endblock %}
 {% block title %}

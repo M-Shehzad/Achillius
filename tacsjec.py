@@ -81,9 +81,9 @@ def recruitment():
         return render_template('form.html')
 
 
-@app.errorhandler(404)
+@app.errorhandler(Exception)
 def error404(error):
-    return render_template('404.html'), 404
+    return render_template('404.html', content = error.code), error.code
 
 
 if __name__ == "__main__":

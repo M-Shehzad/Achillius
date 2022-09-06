@@ -6,8 +6,8 @@ from flask_compress import Compress
 from webhook import TacWebhook
 import smtplib
 
-EMAIL_ADDRESS = ""  # enter sender email's address here
-EMAIL_PASSWORD = ""  # enter sender email's password here
+EMAIL_ADDRESS = "esvc.teamachillius@gmail.com"  # enter sender email's address here
+EMAIL_PASSWORD = "tacsjec2021"  # enter sender email's password here
 
 app = Flask(__name__)
 
@@ -79,6 +79,9 @@ def recruitment():
     else:
         return render_template('form.html')
 
+@app.errorhandler(404)
+def error404(error):
+    return render_template('404.html'), 404
 
 if __name__ == "__main__":
     compress = Compress()

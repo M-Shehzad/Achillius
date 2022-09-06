@@ -630,11 +630,12 @@ footer .footerBottom a{
     /* color:var(--light-color); */
 }
 #page-404 .text-404{
+    overflow: hidden;
     position: absolute;
     z-index: -1;
     color:white;
     opacity: 0.17;
-    font-size:20rem;
+    font-size:clamp(15rem,30vw,20rem);
     font-weight: 400;
     translate: translate(-50%,-50%);
 }

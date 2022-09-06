@@ -6,8 +6,8 @@ from flask_compress import Compress
 from webhook import TacWebhook
 import smtplib
 
-EMAIL_ADDRESS = "esvc.teamachillius@gmail.com"  # enter sender email's address here
-EMAIL_PASSWORD = "tacsjec2021"  # enter sender email's password here
+EMAIL_ADDRESS = ''  # "esvc.teamachillius@gmail.com"  # enter sender email's address here
+EMAIL_PASSWORD = ''  # "tacsjec2021"  # enter sender email's password here
 
 app = Flask(__name__)
 
@@ -66,22 +66,25 @@ def recruitment():
         except requests.exceptions.HTTPError as err:
             return err
         else:
-            msg = EmailMessage()
-            msg['Subject'] = 'Application Received'
-            msg['From'] = EMAIL_ADDRESS
-            msg['To'] = request.form['Email']
-            msg.add_alternative(render_template(
-                'emailTemplate.html', name=request.form['Name'], department=request.form['department']), subtype='html')
-            with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
-                smtp.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
-                smtp.send_message(msg)
+            if EMAIL_ADDRESS and EMAIL_PASSWORD:
+                msg = EmailMessage()
+                msg['Subject'] = 'Application Received'
+                msg['From'] = EMAIL_ADDRESS
+                msg['To'] = request.form['Email']
+                msg.add_alternative(render_template(
+                    'emailTemplate.html', name=request.form['Name'], department=request.form['department']), subtype='html')
+                with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
+                    smtp.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
+                    smtp.send_message(msg)
             return render_template('success.html')
     else:
         return render_template('form.html')
 
+
 @app.errorhandler(404)
 def error404(error):
     return render_template('404.html'), 404
+
 
 if __name__ == "__main__":
     compress = Compress()

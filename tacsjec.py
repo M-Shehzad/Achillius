@@ -5,9 +5,18 @@ import requests
 from flask_compress import Compress
 from webhook import TacWebhook
 import smtplib
+import os
+import dotenv
 
-EMAIL_ADDRESS = ''  # "esvc.teamachillius@gmail.com"  # enter sender email's address here
-EMAIL_PASSWORD = ''  # "tacsjec2021"  # enter sender email's password here
+dotenv_file = os.path.join(os.curdir, ".env")
+if os.path.isfile(dotenv_file):
+    dotenv.load_dotenv(dotenv_file)
+else:
+    print('No .env file found')
+    exit(0)
+
+EMAIL_ADDRESS = os.environ['email']  # "esvc.teamachillius@gmail.com"  # enter sender email's address here
+EMAIL_PASSWORD = os.environ['password']  # "tacsjec2021"  # enter sender email's password here
 
 app = Flask(__name__)
 

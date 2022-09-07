@@ -15,8 +15,8 @@ else:
     print('No .env file found')
     exit(0)
 
-EMAIL_ADDRESS = os.environ['email']  # "esvc.teamachillius@gmail.com"  # enter sender email's address here
-EMAIL_PASSWORD = os.environ['password']  # "tacsjec2021"  # enter sender email's password here
+EMAIL_ADDRESS = os.environ['email']  # enter sender email's address here
+EMAIL_PASSWORD = os.environ['password']   # enter sender email's password here
 
 app = Flask(__name__)
 

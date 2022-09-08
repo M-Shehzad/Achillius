@@ -6,23 +6,26 @@ from flask_compress import Compress
 from webhook import TacWebhook
 import smtplib
 import os
-import dotenv
+# import dotenv
 
-dotenv_file = os.path.join(os.curdir, ".env")
-if os.path.isfile(dotenv_file):
-    dotenv.load_dotenv(dotenv_file)
-else:
-    print('No .env file found')
-    exit(0)
-
-EMAIL_ADDRESS = os.environ['email']  # enter sender email's address here
-EMAIL_PASSWORD = os.environ['password']   # enter sender email's password here
+# dotenv_file = os.path.join(os.curdir, ".env")
+# if os.path.isfile(dotenv_file):
+#     dotenv.load_dotenv(dotenv_file)
+# else:
+#     print('No .env file found')
+#     exit(0)
+print(os.environ.get('email', ''), os.environ.get('password', ''))
+# enter sender email's address here
+EMAIL_ADDRESS = os.environ.get('email', '')
+# enter sender email's password here
+EMAIL_PASSWORD = os.environ.get('password', '')
 
 app = Flask(__name__)
 
 
 @app.route("/")
 def index():
+
     return render_template("index.html")
 
 
@@ -92,7 +95,7 @@ def recruitment():
 
 @app.errorhandler(Exception)
 def error404(error):
-    return render_template('404.html', content = error.code, stylesheet = "../static/images/IMG_6852.jpg"), error.code
+    return render_template('404.html', content=error.code, stylesheet="../static/images/IMG_6852.jpg"), error.code
 
 
 if __name__ == "__main__":

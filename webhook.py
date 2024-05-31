@@ -24,7 +24,7 @@ import pytz
 
 class TacWebhook:
     def __init__(self) -> None:
-        self.url = "https://discord.com/api/webhooks/964833979180138496/Pr7PFh6cgWZTwsgG4j1CGxInVobmtY2_pTywUucdEUehg1Pp7OPVKXQ0yTGwqDZslvO4"
+        self.url = #webhook here
         self.username = "Recruitment Bot"
         self.title = "Application Form"
         self.color = 980461
